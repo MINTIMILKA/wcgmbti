@@ -31,12 +31,19 @@ function test_start()
         document.querySelectorAll(".test > .button > button")[1].innerText = test_select_text_2[document.querySelector(".test > #page").getAttribute("data-page")];
     }
 
-    //모든 테스트 관련 태그 생성 
-    var test_class_length = document.querySelectorAll(".test").length;
-
-    for(var i=0;i<test_class_length;i++)
+    //로딩 화면 
+    loading(next_function);
+    
+    //콜백 함수로 처리 
+    function next_function()
     {
-        document.querySelectorAll(".test")[i].setAttribute("style", "display:''");
+        //모든 테스트 관련 태그 생성 
+        var test_class_length = document.querySelectorAll(".test").length;
+
+        for(var i=0;i<test_class_length;i++)
+        {
+            document.querySelectorAll(".test")[i].setAttribute("style", "display:''");
+        }
     }
 }
 
@@ -77,13 +84,6 @@ function test_select_1()
         for(var i=0;i<test_class_length;i++)
         {
             document.querySelectorAll(".test")[i].setAttribute("style", "display:none");
-        }
-        //모든 결과 관련 태그 생성
-        var result_class_length = document.querySelectorAll(".result").length;
-
-        for(var i=0;i<result_class_length;i++)
-        {
-            document.querySelectorAll(".result")[i].setAttribute("style", "display:''");
         }
 
         //검사 결과 구하기 
@@ -131,6 +131,21 @@ function test_select_1()
                 document.querySelector(".result > .name > p").innerText = result_name_text[i];
                 document.querySelector(".result > .info > p").innerText = reuslt_info_text[i];
                 break;
+            }
+        }
+
+        //로딩 화면 
+        loading(next_function);
+
+        //콜백 함수로 처리 
+        function next_function()
+        {
+            //모든 결과 관련 태그 생성
+            var result_class_length = document.querySelectorAll(".result").length;
+
+            for(var i=0;i<result_class_length;i++)
+            {
+                document.querySelectorAll(".result")[i].setAttribute("style", "display:''");
             }
         }
     }
@@ -178,14 +193,6 @@ function test_select_2()
             document.querySelectorAll(".test")[i].setAttribute("style", "display:none");
         }
 
-        //모든 결과 관련 태그 생성
-        var result_class_length = document.querySelectorAll(".result").length;
-
-        for(var i=0;i<result_class_length;i++)
-        {
-            document.querySelectorAll(".result")[i].setAttribute("style", "display:''");
-        }
-
         //검사 결과 구하기 
         result_text = new String();
 
@@ -233,6 +240,21 @@ function test_select_2()
                 break;
             }
         }
+
+        //로딩 화면 
+        loading(next_function);
+
+        //콜백 함수로 처리 
+        function next_function()
+        {
+            //모든 결과 관련 태그 생성
+            var result_class_length = document.querySelectorAll(".result").length;
+
+            for(var i=0;i<result_class_length;i++)
+            {
+                document.querySelectorAll(".result")[i].setAttribute("style", "display:''");
+            }
+        }
     }
 }
 
@@ -262,6 +284,26 @@ function test_restart()
     {
         document.querySelectorAll(".start")[i].setAttribute("style", "display:''");
     }
+}
+
+function loading(next_function)
+{
+    function loading_on()
+    {
+        document.querySelector(".loading").setAttribute("style", "display:''");
+    }
+
+    function loading_off()
+    {
+        document.querySelector(".loading").setAttribute("style", "display:none");
+        //로딩화면 끄고 다음 함수 실행 
+        next_function();
+    }
+
+    //로딩화면 켜기 
+    loading_on();
+    //2초뒤에 로딩화면 끄기
+    setTimeout(loading_off, 2000);
 }
 
 //질문 텍스트 
