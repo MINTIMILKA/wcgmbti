@@ -17,10 +17,16 @@
 
         <!-- 제목 -->
         <div id="title">
-            <div>
-                <h3>title</h3>
+            <div class="screen_size">
+                <p>화면 크기</p>
             </div>
         </div>
+
+        <!-- 임시 스크립트 -->
+        <!-- 현재 화면 크기를 구하기 위한 스크립트  -->
+        <script>
+            document.querySelector(".screen_size > p").innerText =  "가로: " + screen.availWidth + " / 세로: " + screen.availHeight;
+        </script>
 
         <!-- 내용 -->
         <div id="home_content">
