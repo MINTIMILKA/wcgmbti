@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="ko">
+    <head>
+        <!--  -->
+    </head>
+    <body>
+
+        <!-- 기능 실행 -->
+        <script src="home.js"></script>
+
+        <!-- 제목 -->
+        <div id="title">
+            <div>
+                <h3>title</h3>
+            </div>
+        </div>
+
+        <!-- 내용 -->
+        <div id="home_content">
+            <!-- 시작 -->
+            <div class="start" style="display:''">
+            </div>
+            <!-- 테스트 -->
+            <div class="test" style="display:none">
+
+                <data id="page" data-page="0"></data>
+                
+                <div class="image" style="display:''">
+                    <h6>사진</h6>
+                </div>
+                <div class="question">
+                    <p>질문</p>
+                </div>
+            </div>
+            <!-- 결과 -->
+            <div class="result" style="display:none">
+                <div class="text">
+                    <p>결과 텍스트</p>
+                </div>
+                <div class="name">
+                    <p>결과 이름</p>
+                </div>
+                <div class="info">
+                    <p>결과 설명</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 진행 버튼 -->
+        <div id="home_button">
+            <!-- 시작 -->
+            <div class="start" style="display:''">
+                <div class="button">
+                    <button onclick="test_start()">테스트 시작</button>
+                </div>
+            </div>
+            <!-- 테스트 -->
+            <div class="test" style="display:none">
+
+                <data id="test_data" data-type_1="0" data-type_2="0" data-type_3="0" data-type_4="0"></data>
+                
+                <div class="button">
+                    <button onclick="test_select_1()">선택지 1</button>
+                </div>
+                <div class="button">
+                    <button onclick="test_select_2()">선택지 2</button>
+                </div>
+            </div>
+            <!-- 결과 -->
+            <div class="result"  style="display:none">
+                <div class="button">
+                    <button onclick="test_restart()">다시 해보기</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 링크 -->
+        <div id="home_link">
+            <!-- 시작 -->
+            <div class="start">
+            </div>
+            <!-- 테스트 -->
+            <div class="test">
+            </div>
+            <!-- 결과 -->
+            <div class="result">
+                <div class="link">
+                    <a></a>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
