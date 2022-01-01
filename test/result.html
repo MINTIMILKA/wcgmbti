@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="ko">
+    <head>
+        <!-- 
+            19인치 표준 LCD 모니터(픽셀)	1280 × 1024
+         -->
+        <!-- pc css -->
+        <link rel="stylesheet" media="all and (min-width:1280px)" href="home_pc.css">
+        <!-- phone css -->
+        <link rel="stylesheet" media="all and (max-width:1279px)" href="home_phone.css">
+    </head>
+    <body>
+        <!-- 제목 -->
+        <div id="title">
+            <div class="title">
+                <p>게임 성향 테스트</p>
+            </div>
+        </div>
 
+        <!-- 내용 -->
+        <div id="home_content">
+            <!-- 결과 -->
+            <div class="result" style="display:''">
+                <div class="text">
+                    <p>결과 텍스트</p>
+                </div>
+                
+                <div id="space"></div>
+                
+                <div class="name">
+                    <p>결과 이름</p>
+                </div>
+
+                <div id="space"></div>
+                
+                <div class="info">
+                    <p>결과 설명</p>
+                </div>
+            </div>
+            <div class="loading" style="display:none">
+                <div class="text">
+                    <p>로딩중...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 진행 버튼 -->
+        <div id="home_button">
+            <!-- 결과 -->
+            <div class="result"  style="display:''">
+
+                <div id="space"></div>
+
+                <div class="button">
+                    <button onclick="test_restart()">다시 해보기</button>
+                </div>
+
+                <div id="space"></div>
+
+            </div>
+        </div>
+
+        <!-- 링크 -->
+        <div id="home_link">
+            <!-- 결과 -->
+            <div class="result">
+                <div class="google_link">
+                    <a href="https://www.google.com">구글 링크</a>
+                </div>
+                <div class="kakao_link">
+                    <a id="create-kakao-link-btn" href="javascript:;">
+                      </a>
+                </div>
+            </div>
+        </div>
+        <!-- 기능 실행 -->
+        <script src="result.js"></script>
+    </body>
+</html>
