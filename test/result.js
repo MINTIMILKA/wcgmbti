@@ -14,22 +14,22 @@ var result_address = location.href;
 var type_num = new String();
 
 //결과 텍스트
-result_type_text[0] = new String("INTJ");
-result_type_text[1] = new String("INTP");
-result_type_text[2] = new String("ENTJ");
-result_type_text[3] = new String("ENTP");
-result_type_text[4] = new String("INFJ");
-result_type_text[5] = new String("INFP");
-result_type_text[6] = new String("ENFJ");
-result_type_text[7] = new String("ENFP");
-result_type_text[8] = new String("ISTJ");
-result_type_text[9] = new String("ISFJ");
-result_type_text[10] = new String("ESTJ");
-result_type_text[11] = new String("ESFJ");
-result_type_text[12] = new String("ISTP");
-result_type_text[13] = new String("ISFP");
-result_type_text[14] = new String("ESTP");
-result_type_text[15] = new String("ESFP");
+result_type_text[0] = new String("ADEH");
+result_type_text[1] = new String("ADEG");
+result_type_text[2] = new String("BDEH");
+result_type_text[3] = new String("BDEG");
+result_type_text[4] = new String("ADFH");
+result_type_text[5] = new String("ADFG");
+result_type_text[6] = new String("BDFH");
+result_type_text[7] = new String("BDFG");
+result_type_text[8] = new String("ACEH");
+result_type_text[9] = new String("ACFH");
+result_type_text[10] = new String("BCEH");
+result_type_text[11] = new String("BCFH");
+result_type_text[12] = new String("ACEG");
+result_type_text[13] = new String("ACFG");
+result_type_text[14] = new String("BCEG");
+result_type_text[15] = new String("BCFG");
 
 //결과 이름
 result_name_text[0] = new String("- 체스 천재st");

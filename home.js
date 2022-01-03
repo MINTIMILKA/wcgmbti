@@ -37,6 +37,26 @@ function test_start()
     //콜백 함수로 처리 
     function next_function()
     {
+        //테스트 화면 크기 늘리기
+        document.querySelector("#title").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:100%; height:13%;");
+        document.querySelector("#main_window").setAttribute("style", "height:80%");
+
+        //질문지 화면 크기 맞추기 
+        document.querySelector("#home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:100%; height:50%; margin:0;");
+        document.querySelector("#home_button").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:101%; height:50%; border-top:solid; border-width:2px; background: rgb(232, 232, 232);");
+
+        //화면 사이 공간 오차 맞추기
+        document.querySelector("#main_window > #screen_out > #screen_in").setAttribute("style", "height:98.5%");
+        
+        //세로 스크롤 크기 오차 맞추기 
+        document.querySelector("#main_window > #screen_out > #screen_in > #screen_in_column_1 > #height_scroll > #top_button").setAttribute("style", "height:2%; width:100%; background:rgb(204, 204, 204); border-bottom:solid; border-left:solid; border-width:2px;");
+        document.querySelector("#main_window > #screen_out > #screen_in > #screen_in_column_1 > #height_scroll > #height_scroll_bar").setAttribute("style", "height:95.5%; width:100%; background:rgb(204, 204, 204); border-left:solid; border-width:2px;");
+        document.querySelector("#main_window > #screen_out > #screen_in > #screen_in_column_1 > #height_scroll > #bottom_button").setAttribute("style", "height:2.5%; width:100%; background:rgb(204, 204, 204); border-top:solid; border-left:solid; border-width:2px;");
+
+        //가로 스크롤 크기 오차 맞추기 
+        document.querySelector("#main_window > #screen_out > #screen_in > #screen_in_column_1").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; width:99%; height:98%;");
+        document.querySelector("#main_window > #screen_out > #screen_in > #screen_in_column_2").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; width:100%; height:2%; border-top:solid; border-width:2px;"); 
+
         //모든 테스트 관련 태그 생성 
         var test_class_length = document.querySelectorAll(".test").length;
 
@@ -63,6 +83,11 @@ function test_select_1()
     //테스트가 진행중일 때 
     if(page_num < 12)
     {
+
+        //질문지 화면 크기 맞추기 
+        document.querySelector("#home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:100%; height:50%; margin:0;");
+        document.querySelector("#home_button").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:101%; height:50%; border-top:solid; border-width:2px; background: rgb(232, 232, 232);");
+
         //다음 질문 출력
         document.querySelector(".test > .question > p").innerText = test_question_text[document.querySelector(".test > #page").getAttribute("data-page")];
 
@@ -91,23 +116,23 @@ function test_select_1()
 
         if(document.querySelector(".test > #test_data").getAttribute("data-type_1") > 0)
         {
-            result_text = result_text + "I";
+            result_text = result_text + "A";
         }
         else
         {
-            result_text = result_text + "E";
+            result_text = result_text + "B";
         }
         if(document.querySelector(".test > #test_data").getAttribute("data-type_2") > 0)
         {
-            result_text = result_text + "S";
+            result_text = result_text + "C";
         }
         else
         {
-            result_text = result_text + "N";
+            result_text = result_text + "D";
         }
         if(document.querySelector(".test > #test_data").getAttribute("data-type_3") > 0)
         {
-            result_text = result_text + "T";
+            result_text = result_text + "E";
         }
         else
         {
@@ -115,11 +140,11 @@ function test_select_1()
         }
         if(document.querySelector(".test > #test_data").getAttribute("data-type_4") > 0)
         {
-            result_text = result_text + "P";
+            result_text = result_text + "G";
         }
         else
         {
-            result_text = result_text + "J";
+            result_text = result_text + "H";
         }
 
         loading(go_result)
@@ -186,23 +211,23 @@ function test_select_2()
 
         if(document.querySelector(".test > #test_data").getAttribute("data-type_1") > 0)
         {
-            result_text = result_text + "I";
+            result_text = result_text + "A";
         }
         else
         {
-            result_text = result_text + "E";
+            result_text = result_text + "B";
         }
         if(document.querySelector(".test > #test_data").getAttribute("data-type_2") > 0)
         {
-            result_text = result_text + "S";
+            result_text = result_text + "C";
         }
         else
         {
-            result_text = result_text + "N";
+            result_text = result_text + "D";
         }
         if(document.querySelector(".test > #test_data").getAttribute("data-type_3") > 0)
         {
-            result_text = result_text + "T";
+            result_text = result_text + "E";
         }
         else
         {
@@ -210,11 +235,11 @@ function test_select_2()
         }
         if(document.querySelector(".test > #test_data").getAttribute("data-type_4") > 0)
         {
-            result_text = result_text + "P";
+            result_text = result_text + "G";
         }
         else
         {
-            result_text = result_text + "J";
+            result_text = result_text + "H";
         }
 
         loading(go_result)
@@ -325,22 +350,22 @@ test_select_text_2[10] = new String("대충 11월 첫째주 주말 정도 어때
 test_select_text_2[11] = new String("아… 에반데;; 플랜B랑 플랜C 코스 대충 짜보고 남친/여친한테 연락해서 물어봐야겠다 날씨 짜증나ㅠ");
 
 //결과 텍스트
-result_type_text[0] = new String("INTJ");
-result_type_text[1] = new String("INTP");
-result_type_text[2] = new String("ENTJ");
-result_type_text[3] = new String("ENTP");
-result_type_text[4] = new String("INFJ");
-result_type_text[5] = new String("INFP");
-result_type_text[6] = new String("ENFJ");
-result_type_text[7] = new String("ENFP");
-result_type_text[8] = new String("ISTJ");
-result_type_text[9] = new String("ISFJ");
-result_type_text[10] = new String("ESTJ");
-result_type_text[11] = new String("ESFJ");
-result_type_text[12] = new String("ISTP");
-result_type_text[13] = new String("ISFP");
-result_type_text[14] = new String("ESTP");
-result_type_text[15] = new String("ESFP");
+result_type_text[0] = new String("ADEH");
+result_type_text[1] = new String("ADEG");
+result_type_text[2] = new String("BDEH");
+result_type_text[3] = new String("BDEG");
+result_type_text[4] = new String("ADFH");
+result_type_text[5] = new String("ADFG");
+result_type_text[6] = new String("BDFH");
+result_type_text[7] = new String("BDFG");
+result_type_text[8] = new String("ACEH");
+result_type_text[9] = new String("ACFH");
+result_type_text[10] = new String("BCEH");
+result_type_text[11] = new String("BCFH");
+result_type_text[12] = new String("ACEG");
+result_type_text[13] = new String("ACFG");
+result_type_text[14] = new String("BCEG");
+result_type_text[15] = new String("BCFG");
 
 
 
