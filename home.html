@@ -19,109 +19,92 @@
 
         <!-- 위쪽 배경 -->
         <div id="body_top">
-            <div id="top_left"></div>
-            <div id="top_right"></div>
         </div>
 
         <!-- 중간 배경 -->
         <div id="body_middle">
 
             <!-- 제목 -->
-            <div id="title">
-                <div class="title">
-                    <p>게임 성향 테스트</p>
+            <div id="main_title">
+                <div class="start">
+                    <p></p>
                 </div>
             </div>
 
             <!-- 윈도우 창 -->
             <div id="main_window">
-                
-                <!-- 윈도우 타이틀 바 -->
-                <div id="title_bar">
+                <div class="test_window" style="display:none">
+                    <!-- 테스트 윈도우 이미지 -->
+                    <img src="3_test/6-1.png" style="position:relative;">
                 </div>
-
-                <!-- 윈도우 메인 화면 -->
-                <div id="screen_out">
-                    <div id="screen_in">
-                        <div id="screen_in_column_1">
-                            <div id="window_content">
-                                <!-- 내용 -->
-                                <div id="home_content">
-                                    <!-- 시작 -->
-                                    <div class="start" style="display:''">
-                                        <div class="title">
-                                            <p>시작 타이틀</p>
-                                        </div>
-                                        
-                                        <div id="space"></div>
-                                        
-                                        <div class="text">
-                                            <p>시작 텍스트</p>
-                                        </div>
-                                    </div>
-                                    <!-- 테스트 -->
-                                    <div class="test" style="display:none">
-
-                                        <data id="page" data-page="0"></data>
-
-                                        <div class="image" style="display:''">
-                                            <h6>사진</h6>
-                                        </div>
-
-                                        <div id="space"></div>
-
-                                        <div class="question">
-                                            <p>질문</p>
-                                        </div>
-                                    </div>
-                                    <!-- 로딩 화면 -->
-                                    <div class="loading" style="display:none">
-                                        <div class="text">
-                                            <p>로딩중...</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 진행 버튼 -->
-                                <div id="home_button">
-                                    <!-- 시작 -->
-                                    <div class="start" style="display:''">
-                                        <div class="button">
-                                            <button onclick="test_start()">테스트 시작</button>
-                                        </div>
-                                    </div>
-                                    <!-- 테스트 -->
-                                    <div class="test" style="display:none">
-
-                                        <data id="test_data" data-type_1="0" data-type_2="0" data-type_3="0" data-type_4="0"></data>
-
-                                        <div class="button">
-                                            <button onclick="test_select_1()">선택지 1</button>
-                                        </div>
-
-                                        <div id="space"></div>
-                                        
-                                        <div class="button">
-                                            <button onclick="test_select_2()">선택지 2</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 세로 스크롤 바 -->
-                            <div id="height_scroll" style="height:100%; width:2.5%;">
-                                <div id="top_button" style="height:2.5%; width:100%; background:rgb(204, 204, 204); border-bottom:solid; border-left:solid; border-width:2px;"></div>
-                                <div id="height_scroll_bar" style="height:94.5%; width:100%; background:rgb(204, 204, 204); border-left:solid; border-width:2px;"></div>
-                                <div id="bottom_button" style="height:3%; width:100%; background:rgb(204, 204, 204); border-top:solid; border-left:solid; border-width:2px;"></div>
-                            </div>
-                        </div>
-                        <!-- 가로 스크롤 바 -->
-                        <div id="screen_in_column_2">
-                            <div id="left_button" style="height:100%; width:2.5%; background:rgb(204, 204, 204); border-right:solid; border-width:2px;"></div>
-                            <div id="width_scroll_bar" style="height:100%; width:92.5%; background:rgb(204, 204, 204);"></div>
-                            <div id="right_button" style="height:100%; width:2.5%; background:rgb(204, 204, 204); border-left:solid; border-width:2px;"></div>
-                            <div id="scroll_edge" style="height:100%; width:2.5%; background:rgb(204, 204, 204); border-left:solid; border-width:2px;"></div>
+                <!-- 내용 -->
+                <div id="home_content">
+                    <!-- 시작 -->
+                    <div class="start" style="display:''">
+                        <div class="text">
+                            <p>지금 당장 테스트 시작하기!!</p>
                         </div>
                     </div>
+                    <!-- 테스트 -->
+                    <div class="test" style="display:none">
+
+                        <data id="page" data-page="0"></data>
+
+                        <!-- 질문 -->
+                        <div class="question">
+                            <div id="q_img">
+                                <img src="3_test/2.png" height="30%" style="display:flex; position:relative;">
+                            </div>
+                            <div id="q_text" style="display:flex; flex-direction:column; justify-content:start; align-items:center; width:auto; height:100%;">
+                                <div>질문</div>
+                            </div>
+                        </div>
+
+                        <!-- 사진 -->
+                        <div class="image" style="display:''">
+                            <img src="3_test/1/1.png" height="100%" style="display:flex; position:relative; top:15%">
+                        </div>
+
+                        <div id="space"></div>
+
+                    </div>
+                    <!-- 로딩 화면 -->
+                    <div class="loading" style="display:none">
+                        <div class="text">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 진행 버튼 -->
+                <div id="home_button">
+                    <!-- 시작 -->
+                    <div class="start" style="display:''">
+                        <div class="button">
+                            <button onclick="test_start()">접속하기</button>
+                        </div>
+                    </div>
+                    <!-- 테스트 -->
+                    <div class="test" style="display:none">
+
+                        <data id="test_data" data-type_1="0" data-type_2="0" data-type_3="0" data-type_4="0"></data>
+
+                        <div class="button">
+                            <button onclick="test_select_1()">선택지 1</button>
+                        </div>
+
+                        <div id="space"></div>
+                        
+                        <div class="button">
+                            <button onclick="test_select_2()">선택지 2</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div id="feat">
+                <div class="start">
                 </div>
             </div>
 
