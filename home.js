@@ -200,7 +200,7 @@ function test_select_1()
                 document.querySelector(".test > .image > #img_2").setAttribute("style", "display:none;");
 
                 //현재 문항의 이미지 크기 변경
-                document.querySelector(".test > .image > #img_1").setAttribute("height", "100%");
+                document.querySelector(".test > .image > #img_1").setAttribute("height", "50%");
 
                 //현재 문항의 이미지 생성
                 document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/10/1.png");
@@ -447,7 +447,7 @@ function test_select_2()
                 document.querySelector(".test > .image > #img_2").setAttribute("style", "display:none;");
 
                 //현재 문항의 이미지 크기 변경
-                document.querySelector(".test > .image > #img_1").setAttribute("height", "100%");
+                document.querySelector(".test > .image > #img_1").setAttribute("height", "50%");
 
                 //현재 문항의 이미지 생성
                 document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/10/1.png");
