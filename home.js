@@ -32,7 +32,7 @@ function test_start()
     }
 
     //로딩 화면 
-    loading(next_function);
+    start_loading(next_function);
     
     //콜백 함수로 처리 
     function next_function()
@@ -70,13 +70,165 @@ function test_select_1()
     document.querySelector(".test > #page").setAttribute("data-page", ++page_num);
 
     //다음 질문 출력
-    document.querySelector(".test > .question > div > div").innerText = test_question_text[document.querySelector(".test > #page").getAttribute("data-page")];
+    document.querySelector(".test > .question > #q_text > div").innerText = test_question_text[document.querySelector(".test > #page").getAttribute("data-page")];
 
     //테스트가 진행중일 때 
     if(page_num < 12)
     {
         //다음 윈도우 출력
         document.querySelector("#main_window > .test_window > img").setAttribute("src", "3_test/6-" + (page_num + 1) + ".png");
+
+        //페이지별 크기 조절 및 사진 출력
+        switch(page_num)
+        {
+            case 1:
+                //이전 문항의 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+                
+                //버튼 위치 변경
+                document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; bottom:48%;");
+                document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; top:46%;");
+                document.querySelector("#home_content > .test > #space").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; position:absolute; width:0%; height:5%;");
+                
+                //아래에 윈도우 생성
+                document.querySelector(".test > .sub_window").setAttribute("style", "display:''; position:absolute; width:80%; height:120%; bottom:15%");
+
+                //현재 문항의 이미지 생성
+                document.querySelector("#home_content > .test").setAttribute("style", "display:'' position:absolute; top:0%; height:65%");
+                break;
+            case 2:
+                //이전 문항에서 아래의 윈도우 제거
+                document.querySelector(".test > .sub_window").setAttribute("style", "display:none;");
+
+                //이전 문상의 버튼 위치 변경
+                document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:100%;");
+                document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:100%;");
+
+                //질문 글자 크기 변경 
+                document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:1.7em; line-height:140%; letter-spacing:-0.1em; width:100%; height:100%;");
+
+                //현재 문항의 이미지 크기 변경
+                document.querySelector(".test > .image > #img_1").setAttribute("height", "90%");
+                document.querySelector(".test > .image > #img_2").setAttribute("height", "90%");
+                document.querySelector(".test > .image > #img_3").setAttribute("height", "90%");
+                document.querySelector(".test > .image > #img_4").setAttribute("height", "90%");
+
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/3/1.png");
+                document.querySelector(".test > .image > #img_2").setAttribute("src", "3_test/3/2.png");
+                document.querySelector(".test > .image > #img_3").setAttribute("src", "3_test/3/3.png");
+                document.querySelector(".test > .image > #img_4").setAttribute("src", "3_test/3/4.png");
+
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; right:16%;");
+                document.querySelector(".test > .image > #img_2").setAttribute("style", "display:''; position:relative; left:23%;");
+                document.querySelector(".test > .image > #img_3").setAttribute("style", "display:'';");
+                document.querySelector(".test > .image > #img_4").setAttribute("style", "display:''; position:relative; left:16%;");
+                break;
+            case 3:
+                //이전 문항에서 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+                document.querySelector(".test > .image > #img_2").setAttribute("style", "display:none;");
+                document.querySelector(".test > .image > #img_3").setAttribute("style", "display:none;");
+                document.querySelector(".test > .image > #img_4").setAttribute("style", "display:none;");
+
+                //현재 문항의 이미지 크기 변경
+                document.querySelector(".test > .image > #img_1").setAttribute("height", "80%");
+
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/4/1.png");
+
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; top:15%;");
+                break;
+            case 4:
+                //이전 문항에서 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+
+                //현재 문항의 이미지 크기 변경
+                document.querySelector(".test > .image > #img_1").setAttribute("height", "100%");
+
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/5/1.png");
+
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; top:15%;");
+                break;
+            case 5:
+                //이전 문항에서 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/6/1.png");
+
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:'';");
+                break;
+            case 6:
+                //이전 문항에서 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/7/1.png");
+
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:'';");
+                break;
+            case 7:
+                //이전 문항에서 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/8/1.png");
+                
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:'';");
+                break;
+            case 8:
+                //이전 문항에서 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+                document.querySelector(".test > .image > #img_2").setAttribute("style", "display:none;");
+                
+                //현재 문항의 이미지 크기 변경
+                document.querySelector(".test > .image > #img_1").setAttribute("height", "130%");
+                document.querySelector(".test > .image > #img_2").setAttribute("height", "130%");
+
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/9/2.png");
+                document.querySelector(".test > .image > #img_2").setAttribute("src", "3_test/9/1.png");
+                
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; top:5%; right:15%;");
+                document.querySelector(".test > .image > #img_2").setAttribute("style", "display:''; position:relative; top:5%; left:15%;");
+                break;
+            case 9:
+                //이전 문항에서 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+                document.querySelector(".test > .image > #img_2").setAttribute("style", "display:none;");
+
+                //현재 문항의 이미지 크기 변경
+                document.querySelector(".test > .image > #img_1").setAttribute("height", "100%");
+
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/10/1.png");
+
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:'';");
+                break;
+            case 10:
+                //이전 문항에서 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+                
+                //현재 문항의 이미지 크기 변경
+                document.querySelector(".test > .image > #img_1").setAttribute("height", "80%");
+
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/11/1.png");
+                
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:'';");
+                break;
+            case 11:
+                //이전 문항에서 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+                
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/12/1.png");
+                
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; top:10%;");
+                break;
+        }
 
         //다음 질문 출력
         document.querySelector(".test > .question > div > div").innerText = test_question_text[document.querySelector(".test > #page").getAttribute("data-page")];
@@ -137,7 +289,7 @@ function test_select_1()
             result_text = result_text + "H";
         }
 
-        loading(go_result)
+        end_loading(go_result)
 
         function go_result()
         {
@@ -165,13 +317,165 @@ function test_select_2()
     document.querySelector(".test > #page").setAttribute("data-page", ++page_num);
 
     //다음 질문 출력
-    document.querySelector(".test > .question > div > div").innerText = test_question_text[document.querySelector(".test > #page").getAttribute("data-page")];
+    document.querySelector(".test > .question > #q_text > div").innerText = test_question_text[document.querySelector(".test > #page").getAttribute("data-page")];
 
     //테스트가 진행중일 때 
     if(page_num < 12)
     {
         //다음 윈도우 출력
         document.querySelector("#main_window > .test_window > img").setAttribute("src", "3_test/6-" + (page_num + 1) + ".png");
+
+        //페이지별 크기 조절 및 사진 출력
+        switch(page_num)
+        {
+            case 1:
+                //이전 문항의 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+                
+                //버튼 위치 변경
+                document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; bottom:48%;");
+                document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; top:46%;");
+                document.querySelector("#home_content > .test > #space").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; position:absolute; width:0%; height:5%;");
+                
+                //아래에 윈도우 생성
+                document.querySelector(".test > .sub_window").setAttribute("style", "display:''; position:absolute; width:80%; height:120%; bottom:15%");
+
+                //현재 문항의 이미지 생성
+                document.querySelector("#home_content > .test").setAttribute("style", "display:'' position:absolute; top:0%; height:65%");
+                break;
+            case 2:
+                //이전 문항에서 아래의 윈도우 제거
+                document.querySelector(".test > .sub_window").setAttribute("style", "display:none;");
+
+                //이전 문상의 버튼 위치 변경
+                document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:100%;");
+                document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:100%;");
+
+                //질문 글자 크기 변경 
+                document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:1.7em; line-height:140%; letter-spacing:-0.1em; width:100%; height:100%;");
+
+                //현재 문항의 이미지 크기 변경
+                document.querySelector(".test > .image > #img_1").setAttribute("height", "90%");
+                document.querySelector(".test > .image > #img_2").setAttribute("height", "90%");
+                document.querySelector(".test > .image > #img_3").setAttribute("height", "90%");
+                document.querySelector(".test > .image > #img_4").setAttribute("height", "90%");
+
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/3/1.png");
+                document.querySelector(".test > .image > #img_2").setAttribute("src", "3_test/3/2.png");
+                document.querySelector(".test > .image > #img_3").setAttribute("src", "3_test/3/3.png");
+                document.querySelector(".test > .image > #img_4").setAttribute("src", "3_test/3/4.png");
+
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; right:16%;");
+                document.querySelector(".test > .image > #img_2").setAttribute("style", "display:''; position:relative; left:23%;");
+                document.querySelector(".test > .image > #img_3").setAttribute("style", "display:'';");
+                document.querySelector(".test > .image > #img_4").setAttribute("style", "display:''; position:relative; left:16%;");
+                break;
+            case 3:
+                //이전 문항에서 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+                document.querySelector(".test > .image > #img_2").setAttribute("style", "display:none;");
+                document.querySelector(".test > .image > #img_3").setAttribute("style", "display:none;");
+                document.querySelector(".test > .image > #img_4").setAttribute("style", "display:none;");
+
+                //현재 문항의 이미지 크기 변경
+                document.querySelector(".test > .image > #img_1").setAttribute("height", "80%");
+
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/4/1.png");
+
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; top:15%;");
+                break;
+            case 4:
+                //이전 문항에서 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+
+                //현재 문항의 이미지 크기 변경
+                document.querySelector(".test > .image > #img_1").setAttribute("height", "100%");
+
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/5/1.png");
+
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; top:15%;");
+                break;
+            case 5:
+                //이전 문항에서 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/6/1.png");
+
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:'';");
+                break;
+            case 6:
+                //이전 문항에서 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/7/1.png");
+
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:'';");
+                break;
+            case 7:
+                //이전 문항에서 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/8/1.png");
+                
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:'';");
+                break;
+            case 8:
+                //이전 문항에서 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+                document.querySelector(".test > .image > #img_2").setAttribute("style", "display:none;");
+                
+                //현재 문항의 이미지 크기 변경
+                document.querySelector(".test > .image > #img_1").setAttribute("height", "130%");
+                document.querySelector(".test > .image > #img_2").setAttribute("height", "130%");
+
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/9/2.png");
+                document.querySelector(".test > .image > #img_2").setAttribute("src", "3_test/9/1.png");
+                
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; top:5%; right:15%;");
+                document.querySelector(".test > .image > #img_2").setAttribute("style", "display:''; position:relative; top:5%; left:15%;");
+                break;
+            case 9:
+                //이전 문항에서 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+                document.querySelector(".test > .image > #img_2").setAttribute("style", "display:none;");
+
+                //현재 문항의 이미지 크기 변경
+                document.querySelector(".test > .image > #img_1").setAttribute("height", "100%");
+
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/10/1.png");
+
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:'';");
+                break;
+            case 10:
+                //이전 문항에서 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+                
+                //현재 문항의 이미지 크기 변경
+                document.querySelector(".test > .image > #img_1").setAttribute("height", "80%");
+
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/11/1.png");
+                
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:'';");
+                break;
+            case 11:
+                //이전 문항에서 이미지 제거
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+                
+                //현재 문항의 이미지 생성
+                document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/12/1.png");
+                
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; top:10%;");
+                break;
+        }
 
         //다음 질문 출력
         document.querySelector(".test > .question > div > div").innerText = test_question_text[document.querySelector(".test > #page").getAttribute("data-page")];
@@ -232,7 +536,7 @@ function test_select_2()
             result_text = result_text + "H";
         }
 
-        loading(go_result)
+        end_loading(go_result)
 
         function go_result()
         {
@@ -277,7 +581,7 @@ function test_restart()
     }
 }
 
-function loading(next_function)
+function start_loading(next_function)
 {
     function loading_on()
     {
@@ -309,6 +613,32 @@ function loading(next_function)
     setTimeout(loading_off, 2000);
 }
 
+function end_loading(next_function)
+{
+    function loading_on()
+    {
+        document.querySelector(".loading").setAttribute("style", "display:''");
+
+        //테스트 윈도우 제거
+        document.querySelector("#main_window > .test_window").setAttribute("style", "display:none;");
+
+        //로딩 페이지 생성
+        document.querySelector("#main_title").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; height:22%;");
+        document.querySelector("#main_window").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:80%; height:25%; background-image:url(2_loading/2.png); background-size: contain; background-repeat:no-repeat; background-position:center;");
+    }
+
+    function loading_off()
+    {
+        //로딩화면 끄고 다음 함수 실행 
+        next_function();
+    }
+
+    //로딩화면 켜기 
+    loading_on();
+    //2초뒤에 로딩화면 끄기
+    setTimeout(loading_off, 2000);
+}
+
 //질문 텍스트 
 test_question_text[0] = new String("RPG 게임을 새로\n시작하게 된 당신!\n그 이유는...");
 test_question_text[1] = new String("튜토리얼 중,\n처음 보는 사람들과\n 파티를 맺게 된 당신!");
@@ -320,7 +650,7 @@ test_question_text[6] = new String("게임으로 침해진\n\'랜선친구\'가 
 test_question_text[7] = new String("\"나 힘들게 40시간 갈아\n넣어서 12강 아이템 만듬\"\n이라는 친구의 귓말에,\n당신의 머릿속에 가장\n먼저 떠오르는 생각은...");
 test_question_text[8] = new String("퀘스트 진행 중\n알게 된 두 NPC!\n더 마음이 가는 쪽은...");
 test_question_text[9] = new String("이제 \'고인물\'이\n 되어버린 당신!\n본격적으로 게임을\n즐기기 시작한 당신은...");
-test_question_text[10] = new String("게임 회사에서\n소정의 기프티콘을 주며,\n\'1분으ㅏㅣ 목서리 인터뷰\'에 참여해달라는 제안에\n 당신이 준비하는 내용은...");
+test_question_text[10] = new String("게임 회사에서\n소정의 기프티콘을 주며,\n\'1분의 목소리 인터뷰\'에\n 참여해달라는 제안에\n 당신이 준비하는 내용은...");
 test_question_text[11] = new String("게임을 하다가\n정이 뚝 떨어져서\n게임을 접게 된 당신!\n그 이유는...");
 
 //1번 선택지

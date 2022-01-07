@@ -46,7 +46,7 @@ body
     width:384px;
     height:100%;
 
-    background-image:url(../background_1.png);
+    background-image:url(../3_test/background_1.png);
     background-size: cover;
 }
 
@@ -99,7 +99,7 @@ body
     width:384px;
     height:100%;
 
-    background-image:url(../background_2.png);
+    background-image:url(../3_test/background_2.png);
     background-size: contain;
 }
 

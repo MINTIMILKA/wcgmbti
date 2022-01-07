@@ -1,3 +1,10 @@
+/* 폰트 */
+@font-face
+{
+    font-family:home_font;
+    src:url('DungGeunMo.ttf');
+}
+
 /* 전체 화면 */
 html
 {
@@ -6,6 +13,7 @@ html
     align-items:center;
 
     width:100vw;
+    min-width:36rem;
     height:100vh;
     margin:0;
 
@@ -36,32 +44,20 @@ body
     height:109px;
 }
 
-#body_top #top_left
+#body_top
 {
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
 
-    width:384px;
-    height:100%;
+    width:100%;
+    height:20%;
+    background-image:url(1_start/background_1.png);
+    background-size:contain;
+    background-repeat:no-repeat;
 
-    background-image:url(background_1.png);
-    background-size: cover;
-}
-
-#body_top #top_right
-{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    flex:1;
-
-    height:100%;
-
-    background:#008080;
+    background-color:rgb(0, 64, 64);
 }
 
 #body_middle
@@ -75,7 +71,7 @@ body
 
     width:100%;
 
-    background:#008080;
+    background:rgb(0, 64, 64);
 }
 
 #body_bottom
@@ -92,21 +88,22 @@ body
 #body_bottom #bottom_left
 {
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     justify-content:center;
     align-items:center;
 
     width:384px;
     height:100%;
 
-    background-image:url(background_2.png);
-    background-size: contain;
+    background-image:url(1_start/background_2.png);
+    background-size: cover;
+    background-repeat:no-repeat;
 }
 
 #body_bottom #bottom_right
 {
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     justify-content:center;
     align-items:center;
 
@@ -114,11 +111,27 @@ body
 
     height:100%;
 
-    background:rgb(192, 192, 192);
+    background-image:url(1_start/background_3.png);
+    background-size: cover;
+    background-repeat:repeat;
 }
 
 /* 제목 이름 전체 화면 */
-#title
+#main_title
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+    bottom:10px;
+
+    width:70%;
+    height:37%;
+}
+
+#main_title .start
 {
     display:flex;
     flex-direction:column;
@@ -126,9 +139,40 @@ body
     align-items:center;
 
     width:100%;
-    height:20%;
+    height:100%;
 
-    /*background: rgba(180, 180, 180);*/
+    background-image:url("1_start/4.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:bottom;
+}
+
+/* 제목 이름 전체 화면 */
+#feat
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:25%;
+    height:15%;
+}
+
+#feat .start
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    height:100%;
+
+    background-image:url("1_start/1.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
 }
 
 /*================================================================================
@@ -138,26 +182,16 @@ body
 {
     display:flex;
     flex-direction:column;
-    justify-content:space-between;
+    justify-content:center;
     align-items:center;
 
     width:80%;
-    height:60%;
-    max-height:100%;
+    height:30%;
 
-    background: rgb(204, 204, 204);
-}
-
-#main_window #title_bar
-{
-    width:100%;
-    height:1rem;
-
-    background: rgb(244, 203, 32);
-
-    border-style:solid;
-    border-bottom:none;
-    border-width:2px;
+    background-image:url("1_start/3-1.png");
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position:center;
 }
 
 /* 컨텐츠 전체 화면 */
@@ -169,10 +203,7 @@ body
     align-items:center;
 
     width:100%;
-    height:70%;
-    margin:0;
-
-    /*background: rgba(180, 180, 180);*/
+    height:40%;
 }
 
 #home_content div
@@ -189,59 +220,31 @@ body
 /*================================================================================
     아래 부터 편집 
   ================================================================================*/
-
-/* 제목 이름 화면 */
-#title .title
-{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    width:80%;
-    height:30%;
-
-    background: rgb(60, 210, 165);
-}
-
-/* 시작 타이틀 화면 */
-#home_content .start .title
-{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    width:80%;
-    height:30%;
-
-    background: rgb(60, 110, 210);
-}
-
-/* 시작 타이틀 */
-#home_content .start .title p
-{
-    color:rgb(0, 255, 0);
-}
-
 /* 시작 텍스트 화면 */
 #home_content .start .text
 {
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:end;
     align-items:center;
 
     width:80%;
-    height:30%;
-
-    background: rgb(60, 110, 210);
+    height:100%;
 }
 
 /* 시작 텍스트 */
 #home_content >.start > .text > p
 {
-    color:rgb(255, 0, 0);
+    display:flex;
+    flex-direction:column;
+    justify-content:end;
+    align-items:center;
+
+    font-family: 'home_font';
+    font-size:1.1rem;
+    font-weight:bold;
+
+    width:100%;
 }
 
 /* 텍스트 화면 공백 */
@@ -263,28 +266,22 @@ body
 {
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:start;
     align-items: center;
 
-    width:101%;
-    height:30%;
-
-    border-top:solid;
-    border-width:2px;
-    background: rgb(232, 232, 232);
+    width:100%;
+    height:50%;
 }
 /* 시작 버튼 1개 화면 */
 #home_button .start
 {
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:start;
     align-items: center;
 
-    width:100%;
-    height:80%;
-
-    background:rgb(232, 232, 232);
+    width:70%;
+    height:70%;
 }
 
 /* 시작 버튼 화면*/
@@ -292,11 +289,11 @@ body
 {
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:start;
     align-items: center;
 
     width:80%;
-    height:80%;
+    height:70%;
 }
 
 /* 시작 버튼 */
@@ -307,11 +304,59 @@ body
     justify-content:center;
     align-items: center;
 
+    font-family: 'home_font';
+    font-size:1.1rem;
+
     width:100%;
     height:100%;
 
-    color:rgb(229, 255, 0);
-    background: rgb(17, 204, 0);
+    background-image:url("1_start/2-1.png");
+    background-size:cover;
+}
+
+/* 테스트 질문 화면 */
+#home_content .test .question
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+    right:5%;
+
+    width:90%;
+    height:auto;
+}
+
+/* 테스트 질문 텍스트 화면 */
+#home_content .test .question > #q_img
+{
+    display:flex; 
+    flex-direction:column; 
+    justify-content:start; 
+    align-items:center; 
+    
+    height:100%; 
+    width:15%;
+}
+
+/* 테스트 질문 텍스트 */
+#home_content .test > .question > #q_text > div
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:start;
+    align-items:center;
+    
+    font-family: 'home_font';
+    font-size:2.2em;
+
+    line-height:120%;
+    letter-spacing:-0.1em;
+
+    width:100%;
+    height:100%;
 }
 
 /* 테스트 사진 화면 */
@@ -322,27 +367,11 @@ body
     justify-content:center;
     align-items:center;
 
-    width:70%;
-    height:20%;
-
-    background: rgb(60, 210, 148);
+    width:90%;
+    height:45%;
 }
 
-/* 테스트 질문 화면 */
-#home_content .test .question
-{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    width:70%;
-    height:20%;
-
-    background: rgb(60, 210, 148);
-}
-
-/* 텍스트 화면 공백 */
+/* 테스트 버튼 화면 공백 */
 #home_content .test #space
 {
     display:flex;
@@ -350,10 +379,8 @@ body
     justify-content:center;
     align-items:center;
 
-    width:80%;
-    height:10%;
-
-    background: rgb(105, 105, 105);
+    width:0%;
+    height:5%;
 }
 
 /* 테스트 버튼 2개 화면*/
@@ -365,7 +392,7 @@ body
     align-items: center;
 
     width:100%;
-    height:100%;
+    height:80%;
 }
 
 /* 각각의 테스트 버튼 화면*/
@@ -376,10 +403,8 @@ body
     justify-content:center;
     align-items: center;
 
-    width:40%;
-    height:50%;
-
-    background: rgb(110, 197, 219);
+    width:100%;
+    height:100%;
 }
 
 /* 테스트 버튼 2개*/
@@ -390,8 +415,15 @@ body
     justify-content:center;
     align-items: center;
 
-    width:80%;
-    height:80%;
+    font-family: 'home_font';
+    font-size:1.1rem;
+    letter-spacing:-0.1em;
 
-    background: rgb(110, 197, 219);
+    width:80%;
+    height:65%;
+
+    outline:0;
+
+    background-image:url('3_test/3-1.png');
+    background-size:cover;
 }
