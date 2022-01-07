@@ -13,8 +13,9 @@ html
     align-items:center;
 
     width:100vw;
-    min-width:36rem;
+    min-width:400px;
     height:100vh;
+    min-height:600px;
     margin:0;
 
     background-image:url(background_tile.png);
@@ -112,7 +113,7 @@ body
     height:100%;
 
     background-image:url(1_start/background_3.png);
-    background-size: cover;
+    background-size: contain;
     background-repeat:repeat;
 }
 
@@ -241,7 +242,7 @@ body
     align-items:center;
 
     font-family: 'home_font';
-    font-size:1.1rem;
+    font-size:2rem;
     font-weight:bold;
 
     width:100%;
@@ -305,7 +306,7 @@ body
     align-items: center;
 
     font-family: 'home_font';
-    font-size:1.1rem;
+    font-size:2.3rem;
 
     width:100%;
     height:100%;
@@ -350,7 +351,7 @@ body
     align-items:center;
     
     font-family: 'home_font';
-    font-size:2.2em;
+    font-size:3.2em;
 
     line-height:120%;
     letter-spacing:-0.1em;
@@ -416,7 +417,7 @@ body
     align-items: center;
 
     font-family: 'home_font';
-    font-size:1.1rem;
+    font-size:2.1rem;
     letter-spacing:-0.1em;
 
     width:80%;
