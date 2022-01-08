@@ -42,16 +42,19 @@ function test_start()
     //콜백 함수로 처리 
     function next_function()
     {
-        document.querySelector("#main_title").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; bottom:10px; width:70%; height:0%;");
-        
-        document.querySelector("#main_window").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:90%; height:100%; position:relative; background-image:none;");
-        
-        document.querySelector("#main_window > .test_window > img").setAttribute("width", "100%");
-        document.querySelector("#main_window > .test_window > img").setAttribute("height", "136%");
-        document.querySelector("#main_window > .test_window").setAttribute("style", "display:''; position:relative; bottom:18%;");
+        document.querySelector("#main_title").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; bottom:10px; width:70%; height:0%;");
 
-        document.querySelector("#main_window > #home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:100%; height:53%; position:absolute; bottom:50%;");
-        document.querySelector("#main_window > #home_button").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items: center; width:100%; height:45%; position:absolute; top:55%;");
+        if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
+        {
+            document.querySelector("#main_window").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:30em; height:43em; background-image:url(3_test/6-1.png); background-size:100% 100%;");
+        }
+        if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
+        {
+            document.querySelector("#main_window").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:840px; height:1142px; background-image:url(3_test/6-1.png); background-size:100% 100%;");
+        }
+
+        document.querySelector("#main_window > #home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:100%; height:53%;");
+        document.querySelector("#main_window > #home_button").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:47%;");
         
         
         //모든 테스트 관련 태그 생성(2개)
@@ -59,8 +62,10 @@ function test_start()
 
         for(var i=0;i<test_class_length;i++)
         {
-            document.querySelectorAll(".test")[i].setAttribute("style", "display:'' position:absolute; top:50%;");
+            document.querySelectorAll(".test")[i].setAttribute("style", "display:'';");
         }
+
+        document.querySelector("#home_content > .test").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center;");
     }
 }
 
@@ -81,36 +86,51 @@ function test_select_1()
     if(page_num < 12)
     {
         //다음 윈도우 출력
-        document.querySelector("#main_window > .test_window > img").setAttribute("src", "3_test/6-" + (page_num + 1) + ".png");
+        if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
+        {
+            document.querySelector("#main_window").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:30em; height:43em; background-image:url(3_test/6-" + (page_num + 1) + ".png); background-size:100% 100%;");
+        }
+        if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
+        {
+            document.querySelector("#main_window").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:840px; height:1142px; background-image:url(3_test/6-" + (page_num + 1) + ".png); background-size:100% 100%;");
+        }
 
         //페이지별 크기 조절 및 사진 출력
         switch(page_num)
         {
             case 1:
+                //질문 내용 화면 크기 조절
+                document.querySelector("#main_window > #home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:100%; height:62%;");
+                document.querySelector("#main_window > #home_button").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:38%;");
+
                 //이전 문항의 이미지 제거
                 document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
                 
                 //버튼 위치, 크기 변경
                 if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
                 {
-                    document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; bottom:48%;");
-                    document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; top:46%;");
+                    //document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; bottom:48%;");
+                    //document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; top:46%;");
+
+                    document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%;");
+                    document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%;");
                 }
                 if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
                 {
 
-                    document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:30%; position:absolute; bottom:51%;");
-                    document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:30%; position:absolute; top:49%;");
+                    document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%;");
+                    document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; top:49%;");
                 }
-                
-                //현재 문항의 이미지 생성
-                document.querySelector("#home_content > .test").setAttribute("style", "display:'' position:absolute; top:0%; height:65%");
 
                 break;
             case 2:
+                //질문 내용 화면 크기 조절
+                document.querySelector("#main_window > #home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:100%; height:53%;");
+                document.querySelector("#main_window > #home_button").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:47%;");
+                
                 //버튼 위치 변경
-                document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; bottom:48%;");
-                document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; top:46%;");
+                document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%;");
+                document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%;");
 
                 //이전 문상의 버튼 위치 변경
                 document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:100%;");
@@ -119,12 +139,18 @@ function test_select_1()
                 //질문 글자 크기 변경 
                 if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
                 {
+                    document.querySelector(".test > .question").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:60%;");
                     document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:1.7em; line-height:140%; letter-spacing:-0.1em; height:100%;");
                 }
                 if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
                 {
+                    document.querySelector(".test > .question").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:60%;");
                     document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:3em; line-height:140%; letter-spacing:-0.1em; height:100%;");
                 }
+
+                //질문 그림 크기 변경
+                document.querySelector(".test > .image").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:23%;");
+                document.querySelectorAll(".test > .question > #q_img > img")[0].setAttribute("height", "20%");
 
                 //현재 문항의 이미지 크기 변경
                 document.querySelector(".test > .image > #img_1").setAttribute("height", "90%");
@@ -372,39 +398,71 @@ function test_select_2()
     if(page_num < 12)
     {
         //다음 윈도우 출력
-        document.querySelector("#main_window > .test_window > img").setAttribute("src", "3_test/6-" + (page_num + 1) + ".png");
+        if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
+        {
+            document.querySelector("#main_window").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:30em; height:43em; background-image:url(3_test/6-" + (page_num + 1) + ".png); background-size:100% 100%;");
+        }
+        if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
+        {
+            document.querySelector("#main_window").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:840px; height:1142px; background-image:url(3_test/6-" + (page_num + 1) + ".png); background-size:100% 100%;");
+        }
 
         //페이지별 크기 조절 및 사진 출력
         switch(page_num)
         {
             case 1:
+                //질문 내용 화면 크기 조절
+                document.querySelector("#main_window > #home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:100%; height:62%;");
+                document.querySelector("#main_window > #home_button").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:38%;");
+
                 //이전 문항의 이미지 제거
                 document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
                 
                 //버튼 위치, 크기 변경
                 if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
                 {
-                    document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; bottom:48%;");
-                    document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; top:46%;");
+                    //document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; bottom:48%;");
+                    //document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; top:46%;");
+
+                    document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%;");
+                    document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%;");
                 }
                 if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
                 {
 
-                    document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:30%; position:absolute; bottom:51%;");
-                    document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:30%; position:absolute; top:49%;");
+                    document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%;");
+                    document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; top:49%;");
                 }
 
-                //현재 문항의 이미지 생성
-                document.querySelector("#home_content > .test").setAttribute("style", "display:'' position:absolute; top:0%; height:65%");
                 break;
             case 2:
+                //질문 내용 화면 크기 조절
+                document.querySelector("#main_window > #home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:100%; height:53%;");
+                document.querySelector("#main_window > #home_button").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:47%;");
+                
                 //버튼 위치 변경
-                document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; bottom:48%;");
-                document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; top:46%;");
+                document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%;");
+                document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%;");
 
                 //이전 문상의 버튼 위치 변경
                 document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:100%;");
                 document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:100%;");
+
+                //질문 글자 크기 변경 
+                if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
+                {
+                    document.querySelector(".test > .question").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:60%;");
+                    document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:1.7em; line-height:140%; letter-spacing:-0.1em; height:100%;");
+                }
+                if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
+                {
+                    document.querySelector(".test > .question").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:60%;");
+                    document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:3em; line-height:140%; letter-spacing:-0.1em; height:100%;");
+                }
+
+                //질문 그림 크기 변경
+                document.querySelector(".test > .image").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:23%;");
+                document.querySelectorAll(".test > .question > #q_img > img")[0].setAttribute("height", "20%");
 
                 //현재 문항의 이미지 크기 변경
                 document.querySelector(".test > .image > #img_1").setAttribute("height", "90%");
@@ -670,8 +728,8 @@ function start_loading(next_function)
         document.querySelector(".loading").setAttribute("style", "display:''");
         
         //배경화면 변경
-        document.querySelector("#body_top").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center;  width:100%; height:20%; background-image:url(3_test/background_1.png); background-size:contain; background-repeat:no-repeat; background-color:rgb(0, 128, 128);");
-        document.querySelector("#body_middle").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; flex:1; width:100%; background:rgb(0, 128, 128);");
+        document.querySelector("#body_top").setAttribute("style", "display:flex; flex-direction:row; justify-content:start; align-items:center; width:100%; height:20%; background-image:url(3_test/background_1.png); background-size:contain; background-repeat:no-repeat; width:100%; height:109px; background-color:rgb(0, 128, 128);");
+        document.querySelector("#body_middle").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; flex:1; width:100%; background:rgb(0, 128, 128);");
         document.querySelector("#body_bottom > #bottom_left").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; width:384px; height:100%; background-image:url(3_test/background_2.png); background-size: cover; background-repeat:no-repeat;");
         
         if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
@@ -685,12 +743,11 @@ function start_loading(next_function)
         
         //로딩 페이지 생성
         document.querySelector("#main_title").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; height:22%;");
-        document.querySelector("#main_window").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:80%; height:25%; background-image:url(2_loading/1.png); background-size: contain; background-repeat:no-repeat; background-position:center;");
+        document.querySelector("#main_window").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; bottom:10%; width:80%; height:25%; background-image:url(2_loading/1.png); background-size: contain; background-repeat:no-repeat; background-position:center;");
     }
 
     function loading_off()
     {
-        document.querySelector("#main_window").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:80%; height:25%; background-image:none; background-size: contain; background-repeat:no-repeat; background-position:center;");
         document.querySelector(".loading").setAttribute("style", "display:none");
 
         //로딩화면 끄고 다음 함수 실행 
@@ -709,12 +766,9 @@ function end_loading(next_function)
     {
         document.querySelector(".loading").setAttribute("style", "display:''");
 
-        //테스트 윈도우 제거
-        document.querySelector("#main_window > .test_window").setAttribute("style", "display:none;");
-
         //로딩 페이지 생성
         document.querySelector("#main_title").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; height:22%;");
-        document.querySelector("#main_window").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:80%; height:25%; background-image:url(2_loading/2.png); background-size: contain; background-repeat:no-repeat; background-position:center;");
+        document.querySelector("#main_window").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; position:relative; bottom:10%; align-items:center; width:80%; height:25%; background-image:url(2_loading/2.png); background-size: contain; background-repeat:no-repeat; background-position:center;");
     }
 
     function loading_off()
