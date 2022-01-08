@@ -753,7 +753,7 @@ test_select_text_2[7] = new String("헐 40시간 동안 혼자 어떤 싸움을 
 test_select_text_2[8] = new String("불우한 환경에도\n 역경을 헤치고 성장한 소년");
 test_select_text_2[9] = new String("아이템과 스킬 종류를 파악하고,\n 내가 없는 걸 채우기 위해 고민한다");
 test_select_text_2[10] = new String("구체적으로 게임의 어떤 부분이\n재밌었는지 말하기");
-test_select_text_2[11] = new String("밸런스도 엉망이고, 완성도가 떨어져서 몰입이 안 돼...");
+test_select_text_2[11] = new String("밸런스도 엉망이고, \n완성도가 떨어져서 몰입이 안 돼...");
 
 //결과 텍스트
 result_type_text[0] = new String("ADEH");
