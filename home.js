@@ -90,16 +90,28 @@ function test_select_1()
                 //이전 문항의 이미지 제거
                 document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
                 
-                //버튼 위치 변경
-                document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; bottom:48%;");
-                document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; top:46%;");
-                document.querySelector("#home_content > .test > #space").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; position:absolute; width:0%; height:5%;");
+                //버튼 위치, 크기 변경
+                if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
+                {
+                    document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; bottom:48%;");
+                    document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; top:46%;");
+                }
+                if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
+                {
+
+                    document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:30%; position:absolute; bottom:51%;");
+                    document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:30%; position:absolute; top:49%;");
+                }
                 
                 //현재 문항의 이미지 생성
                 document.querySelector("#home_content > .test").setAttribute("style", "display:'' position:absolute; top:0%; height:65%");
 
                 break;
             case 2:
+                //버튼 위치 변경
+                document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; bottom:48%;");
+                document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; top:46%;");
+
                 //이전 문상의 버튼 위치 변경
                 document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:100%;");
                 document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:100%;");
@@ -130,6 +142,7 @@ function test_select_1()
                 document.querySelector(".test > .image > #img_2").setAttribute("style", "display:''; position:relative; left:23%;");
                 document.querySelector(".test > .image > #img_3").setAttribute("style", "display:'';");
                 document.querySelector(".test > .image > #img_4").setAttribute("style", "display:''; position:relative; left:16%;");
+
                 break;
             case 3:
                 //이전 문항에서 이미지 제거
@@ -368,28 +381,30 @@ function test_select_2()
                 //이전 문항의 이미지 제거
                 document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
                 
-                //버튼 위치 변경
-                document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; bottom:48%;");
-                document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; top:46%;");
-                document.querySelector("#home_content > .test > #space").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; position:absolute; width:0%; height:5%;");
-                
+                //버튼 위치, 크기 변경
+                if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
+                {
+                    document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; bottom:48%;");
+                    document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; top:46%;");
+                }
+                if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
+                {
+
+                    document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:30%; position:absolute; bottom:51%;");
+                    document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:30%; position:absolute; top:49%;");
+                }
+
                 //현재 문항의 이미지 생성
                 document.querySelector("#home_content > .test").setAttribute("style", "display:'' position:absolute; top:0%; height:65%");
                 break;
             case 2:
+                //버튼 위치 변경
+                document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; bottom:48%;");
+                document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; top:46%;");
+
                 //이전 문상의 버튼 위치 변경
                 document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:100%;");
                 document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:100%;");
-
-                //질문 글자 크기 변경 
-                if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
-                {
-                    document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:1.7em; line-height:140%; letter-spacing:-0.1em; height:100%;");
-                }
-                if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
-                {
-                    document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:3em; line-height:140%; letter-spacing:-0.1em; height:100%;");
-                }
 
                 //현재 문항의 이미지 크기 변경
                 document.querySelector(".test > .image > #img_1").setAttribute("height", "90%");
@@ -407,6 +422,7 @@ function test_select_2()
                 document.querySelector(".test > .image > #img_2").setAttribute("style", "display:''; position:relative; left:23%;");
                 document.querySelector(".test > .image > #img_3").setAttribute("style", "display:'';");
                 document.querySelector(".test > .image > #img_4").setAttribute("style", "display:''; position:relative; left:16%;");
+
                 break;
             case 3:
                 //이전 문항에서 이미지 제거
