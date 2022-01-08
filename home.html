@@ -32,10 +32,6 @@
 
             <!-- 윈도우 창 -->
             <div id="main_window">
-                <div class="test_window" style="display:none">
-                    <!-- 테스트 윈도우 이미지 -->
-                    <img src="3_test/6-1.png" style="position:relative;">
-                </div>
                 <!-- 내용 -->
                 <div id="home_content">
                     <!-- 시작 -->
@@ -50,6 +46,8 @@
                     <div class="test" style="display:none">
 
                         <data id="page" data-page="0"></data>
+                        
+                        <div id="space" style="height:10%;"></div>
 
                         <!-- 질문 -->
                         <div class="question">
@@ -64,14 +62,12 @@
                         <!-- 사진 -->
                         <div class="image" style="display:flex; flex-direction:row; justify-content:center; align-items:center;">
                             
-                            <img id="img_1" src="3_test/1/1.png" height="100%" style="display:flex; position:relative; top:15%;">
+                            <img id="img_1" src="3_test/1/1.png" height="100%" style="display:flex;">
                             <img id="img_2" height="100%" style="display:none">
                             <img id="img_3" height="100%" style="display:none">
                             <img id="img_4" height="100%" style="display:none">
                             
                         </div>
-
-                        <div id="space"></div>
 
                     </div>
                     <!-- 로딩 화면 -->
@@ -94,6 +90,8 @@
                     <div class="test" style="display:none">
 
                         <data id="test_data" data-type_1="0" data-type_2="0" data-type_3="0" data-type_4="0"></data>
+
+                        <div id=space></div>
 
                         <div class="button">
                             <button onclick="test_select_1()">선택지 1</button>
