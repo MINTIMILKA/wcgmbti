@@ -13,6 +13,9 @@ var reuslt_info_text = new Array(16);
 //테스트 시작 함수
 function test_start()
 {
+    //배경 바꾸기
+    document.querySelector("html").setAttribute("style", "display:flex; flex-direction:column; align-items:center; width:100vw; min-width:36rem; height:100vh; min-height:900px;  margin:0; background-color:rgb(0, 128, 128);");
+
     //모든 시작 관련 태그 제거 
     var start_class_length = document.querySelectorAll(".start").length;
 
@@ -92,16 +95,11 @@ function test_select_1()
                 document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; top:46%;");
                 document.querySelector("#home_content > .test > #space").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; position:absolute; width:0%; height:5%;");
                 
-                //아래에 윈도우 생성
-                document.querySelector(".test > .sub_window").setAttribute("style", "display:''; position:absolute; width:80%; height:120%; bottom:15%");
-
                 //현재 문항의 이미지 생성
                 document.querySelector("#home_content > .test").setAttribute("style", "display:'' position:absolute; top:0%; height:65%");
+
                 break;
             case 2:
-                //이전 문항에서 아래의 윈도우 제거
-                document.querySelector(".test > .sub_window").setAttribute("style", "display:none;");
-
                 //이전 문상의 버튼 위치 변경
                 document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:100%;");
                 document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:100%;");
@@ -375,16 +373,10 @@ function test_select_2()
                 document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:94%; height:40%; position:absolute; top:46%;");
                 document.querySelector("#home_content > .test > #space").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; position:absolute; width:0%; height:5%;");
                 
-                //아래에 윈도우 생성
-                document.querySelector(".test > .sub_window").setAttribute("style", "display:''; position:absolute; width:80%; height:120%; bottom:15%");
-
                 //현재 문항의 이미지 생성
                 document.querySelector("#home_content > .test").setAttribute("style", "display:'' position:absolute; top:0%; height:65%");
                 break;
             case 2:
-                //이전 문항에서 아래의 윈도우 제거
-                document.querySelector(".test > .sub_window").setAttribute("style", "display:none;");
-
                 //이전 문상의 버튼 위치 변경
                 document.querySelectorAll("#home_button > .test > .button")[0].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:100%;");
                 document.querySelectorAll("#home_button > .test > .button")[1].setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:100%;");
