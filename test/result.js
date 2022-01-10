@@ -76,9 +76,8 @@ for(var i=result_address.indexOf("type")+"type".length+1;i<result_address.length
 console.log(parseInt(type_num));
 
 //결과 출력 
-document.querySelector(".result > .text > p").innerText = result_type_text[parseInt(type_num)];
-document.querySelector(".result > .name > p").innerText = result_name_text[parseInt(type_num)];
-document.querySelector(".result > .info > p").innerText = reuslt_info_text[parseInt(type_num)];
+document.querySelector(".result > .text").innerText = result_type_text[parseInt(type_num)];
+document.querySelector(".result > .name").innerText = result_name_text[parseInt(type_num)];
 
 function test_restart()
 {

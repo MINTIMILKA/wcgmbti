@@ -1,18 +1,31 @@
+/* 폰트 */
+@font-face
+{
+    font-family:home_font;
+    src:url('../DungGeunMo.ttf');
+}
+
 /* 전체 화면 */
-html, body
+html
 {
     display:flex;
     flex-direction:column;
     align-items:center;
 
     width:100vw;
-    height:100vh;
+    height:293em;
+    min-height:293em;
     margin:0;
 
+    /*
     background-image:url(../background_tile.png);
     background-repeat:repeat;
     background-size:100px;
+    */
+
+    /* background-color:rgb(0, 128, 128); */
 }
+
 body
 {
     display:flex;
@@ -31,38 +44,18 @@ body
     flex-direction:row;
     justify-content:start;
     align-items:center;
+    
+    background-image:url(../3_test/background_1.png);
+    background-size:contain;
+    background-repeat:no-repeat;
 
     width:100%;
     height:109px;
+    min-height:109px;
+
+    background-color:rgb(0, 128, 128);
 }
 
-#body_top #top_left
-{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    width:384px;
-    height:100%;
-
-    background-image:url(../3_test/background_1.png);
-    background-size: cover;
-}
-
-#body_top #top_right
-{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    flex:1;
-
-    height:100%;
-
-    background:#008080;
-}
 
 #body_middle
 {
@@ -74,8 +67,9 @@ body
     flex:1;
 
     width:100%;
+    height:100em;
 
-    background:#008080;
+    background-color:rgb(0, 128, 128);
 }
 
 #body_bottom
@@ -100,13 +94,14 @@ body
     height:100%;
 
     background-image:url(../3_test/background_2.png);
-    background-size: contain;
+    background-size: cover;
+    background-repeat:no-repeat;
 }
 
 #body_bottom #bottom_right
 {
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     justify-content:center;
     align-items:center;
 
@@ -114,7 +109,9 @@ body
 
     height:100%;
 
-    background:rgb(192, 192, 192);
+    background-image:url(../3_test/background_3.png);
+    background-size: contain;
+    background-repeat:repeat;
 }
 
 /* 제목 이름 전체 화면 */
@@ -126,9 +123,10 @@ body
     align-items:center;
 
     width:100%;
-    height:20%;
+    height:0%;
     margin:0;
-    /* background: rgba(180, 180, 180); */
+
+    /* background:rgb(180, 180, 180); */
 }
 
 /* 컨텐츠 전체 화면 */
@@ -136,14 +134,16 @@ body
 {
     display:flex;
     flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    justify-content:start;
+    align-items: center;
 
-    width:100%;
-    height:60%;
-    margin:0;
+    width:90%;
+    height:142em;
+    min-height:142em;
 
-    /* background: rgba(180, 180, 180); */
+    background-image:url(../4_result/1/3.png);
+    background-size:100% 100%;
+    background-repeat:no-repeat;
 }
 #home_content div
 {
@@ -156,184 +156,378 @@ body
     height:100%;
 }
 
-/* 링크 전체 화면 */
-#home_link
+/* 이벤트 윈도우 화면 */
+#event_window
 {
     display:flex;
     flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    justify-content:start;
+    align-items: center;
+
+    width:90%;
+    height:124em;
+    min-height:124em;
+
+    background-image:url(../4_result/5/2.png);
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+}
+
+/* 이벤트 윈도우 화면 */
+#event_window .result
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:start;
+    align-items: center;
 
     width:100%;
-    height:20%;
-    margin:0;
-
-    /* background: rgba(180, 180, 180); */
+    height:100%;
 }
+
+#body_bottom_space
+{
+    width:100%;
+    height:12em;
+    background-color:rgb(192, 192, 192);
+}
+
 
 /*================================================================================
     아래 부터 편집 
   ================================================================================*/
 
-/* 제목 이름 화면 */
-#title .title
-{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
 
-    width:80%;
-    height:30%;
-
-    background: rgb(60, 210, 165);
-}
-
-/* 시작 타이틀 화면 */
-#home_content .start .title
-{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    width:80%;
-    height:30%;
-
-    background: rgb(60, 110, 210);
-}
-
-/* 시작 타이틀 */
-#home_content .start .title p
-{
-    color:rgb(0, 255, 0);
-}
-
-/* 버튼 화면 */
-#home_button
-{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items: center;
-
-    width:100%;
-    height:20%;
-
-    /* background: rgba(180, 180, 180); */
-}
-
-/* 결과 텍스트 화면 */
-#home_content .result .text
-{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items: center;
-
-    width:80%;
-    height:20%;
-
-    background: rgb(60, 110, 210);
-}
-
-/* 결과 텍스트 */
-#home_content .result .text p
-{
-    color:rgb(0, 255, 0);
-}
-
-/* 결과 이름 화면 */
-#home_content .result .name
-{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items: center;
-
-    width:80%;
-    height:20%;
-
-    background: rgb(60, 110, 210);
-}
-
-/* 결과 이름 */
-#home_content .result .name p
-{
-    color:rgb(255, 255, 0);
-}
-
-/* 결과 설명 화면 */
-#home_content .result .info
-{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items: center;
-
-    width:80%;
-    height:40%;
-
-    background: rgb(60, 110, 210);
-}
-
-/* 결과 설명 */
-#home_content .result .info p
-{
-    color:rgb(255, 0, 255);
-}
-
-/* 결과 화면 공백 */
-#home_content .result #space
-{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    width:80%;
-    height:6%;
-
-    background: rgb(105, 105, 105);
-}
-
-/* 결과 버튼 1개 화면 */
-#home_button .result
-{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items: center;
-
-    width:80%;
-    height:80%;
-
-    background:rgb(255, 180, 180);
-}
-
-/* 결과 버튼 화면*/
-#home_button .result .button
-{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items: center;
-
-    width:80%;
-    height:80%;
-}
-
-/* 결과 버튼 */
-#home_button .result .button button
-{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items: center;
-
-    width:100%;
-    height:100%;
-
-    background:rgb(229, 255, 0);
-    color: rgb(17, 204, 0);
-}
+  #body_middle #main_space_1
+  {
+      width:80%;
+      height:0px;
+  }
+  
+  /* 결과 화면 공백 */
+  #home_content .result #space_1
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+  
+      width:80%;
+      height:5%;
+  }
+  
+  /* 결과 텍스트 화면 */
+  #home_content .result .text
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items: center;
+  
+      width:80%;
+      height:8%;
+  }
+  
+  /* 결과 텍스트 화면 */
+  #home_content .result .img
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items: center;
+  
+      width:80%;
+      height:25%;
+  }
+  
+  /* 결과 설명 화면 */
+  #home_content .result .info_window
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items: center;
+  
+      width:80%;
+      height:32%;
+  
+      background-image:url(../4_result/1/2.png);
+      background-size:100% 95%;
+      background-repeat:no-repeat;
+  }
+  
+  /* 결과 주의사항 윈도우 화면 */
+  #home_content .result .warn_window
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items: center;
+  
+      width:80%;
+      height:28%;
+  
+      background-image:url(../4_result/1/4.png);
+      background-size:100% 95%;
+      background-repeat:no-repeat;
+  }
+  
+  /* 결과 화면 공백 */
+  #home_content .result #space_2
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+  
+      width:80%;
+      height:2%;
+  }
+  
+  #body_middle #main_space_2
+  {
+      width:80%;
+      height:30px;
+  }
+  
+  /* 이벤트 화면 공백 */
+  #event_window .result #space_1
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+  
+      width:80%;
+      height:5%;
+  }
+  
+  /* 텍스트: 해시태그 이벤트 */
+  #event_window .result .name
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+  
+      width:80%;
+      height:10%;
+  }
+  
+  /* 이벤트 텍스트 */
+  #event_window .result .text_1
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+  
+      width:80%;
+      height:10%;
+  }
+  
+  /* 텍스트: 이벤트 기간, 당첨자 발표 */
+  #event_window .result .text_2
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+  
+      width:80%;
+      height:10%;
+  }
+  
+  /* 텍스트: 이벤트 설명 */
+  #event_window .result .info_window_1
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+  
+      width:80%;
+      height:25%;
+  
+      background-image:url(../4_result/5/3.png);
+      background-size:100% 95%;
+      background-repeat:no-repeat;
+  }
+  
+  /* 텍스트: 당첨 상품 */
+  #event_window .result .text_3
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+  
+      width:80%;
+      height:4%;
+  }
+  
+  /* 텍스트: 치킨, 콜라 */
+  #event_window .result .text_4
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+  
+      width:80%;
+      height:10%;
+  }
+  
+  /* 유의사항 텍스트 */
+  #event_window .result .text_5
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+  
+      width:80%;
+      height:10%;
+  }
+  
+  /* 텍스트: 이벤트 설명 */
+  #event_window .result .info_window_2
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+  
+      width:80%;
+      height:13%;
+  
+      background-image:url(../4_result/5/4.png);
+      background-size:100% 95%;
+      background-repeat:no-repeat;
+  }
+  
+  /* 이벤트 화면 공백 */
+  #event_window .result #space_2
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+  
+      width:80%;
+      height:3%;
+  }
+  
+  #body_middle #main_space_3
+  {
+      width:80%;
+      height:30px;
+  }
+  
+  #home_button
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:end;
+      align-items: center;
+  
+      position:fixed;
+      bottom:-1.5%;
+  
+      width:100%;
+      height:15em;
+  }
+  
+  /* 결과 버튼 1개 화면 */
+  #home_button .result
+  {
+      display:flex;
+      flex-direction:row;
+      justify-content:center;
+      align-items: center;
+  
+      width:100%;
+      height:100%;
+  
+      background-image:url(../4_result/7/1.png);
+      background-size:100% 100%;
+  }
+  
+  /* 공유 사진 */
+  #home_button .result .img
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items: center;
+  
+      width:20%;
+      height:80%;
+  
+      background-image:url(../4_result/7/3.png);
+      background-position:center;
+      background-size:80% 80%;
+      background-repeat:no-repeat;
+  }
+  
+  /* 공유 버튼 */
+  #home_button .result .share
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items: center;
+  
+      width:60%;
+      height:80%;
+  }
+  
+  /* 공유 버튼 */
+  #home_button .result .share button
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items: center;
+  
+      width:100%;
+      height:80%;
+  
+      border:0;
+      outline:0;
+  
+      background:url(../4_result/7/4.png);
+      background-size:100% 100%;
+      background-repeat:no-repeat;
+  }
+  
+  /* 결과 버튼 */
+  #home_button .result .restart
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items: center;
+  
+      width:20%;
+      height:80%;
+  }
+  
+  /* 결과 버튼 */
+  #home_button .result .restart button
+  {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items: center;
+  
+      width:90%;
+      height:90%;
+  
+      border:0;
+      outline:0;
+  
+      background:url(../4_result/7/2.png);
+      background-size:100% 100%;
+      background-repeat:no-repeat;
+  }
