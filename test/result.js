@@ -81,7 +81,31 @@ document.querySelector(".result > .name").innerText = result_name_text[parseInt(
 
 function test_restart()
 {
-    //모든 시작 관련 태그 제거 
+    if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
+    {
+        document.querySelector("html").setAttribute("style", "display:flex; flex-direction:column; align-items:center; width:100vw; min-width:36rem; height:100vh; min-height:900px; margin:0;");
+    }
+    if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
+    {
+        document.querySelector("html").setAttribute("style", "display:flex; flex-direction:column; align-items:center; width:100vw; height:100vh; min-height:600px; margin:0;");
+    }
+
+    document.querySelector("#body_middle").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; flex:1; width:100%; height:40%; background-color:rgb(0, 128, 128);");
+    
+    document.querySelector("#main_space_1").setAttribute("style", "display:none");
+    
+    document.querySelector("#home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:100%; height:100%; min-height:0%; background-image:none;");
+    
+    document.querySelector("#main_space_2").setAttribute("style", "display:none");
+    
+    document.querySelector("#event_window").setAttribute("style", "display:none");
+    
+    document.querySelector("#main_space_3").setAttribute("style", "display:none");
+    
+    document.querySelector("#body_bottom_space").setAttribute("style", "display:none");
+    document.querySelector("#home_button").setAttribute("style", "display:none");
+
+    //모든 결과 관련 태그 제거 
     var start_class_length = document.querySelectorAll(".result").length;
 
     for(var i=0;i<start_class_length;i++)
@@ -102,6 +126,9 @@ function loading(next_function)
     function loading_on()
     {
         document.querySelector(".loading").setAttribute("style", "display:''");
+
+        //로딩 페이지 생성
+        document.querySelector("#home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:80%; height:100%; min-height:0%; background-image:url(../2_loading/2.png); background-size: contain; background-repeat:no-repeat; background-position:center;");
     }
 
     function loading_off()
