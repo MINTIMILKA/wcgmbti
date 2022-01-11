@@ -73,12 +73,69 @@ for(var i=result_address.indexOf("type")+"type".length+1;i<result_address.length
     type_num = type_num + result_address[i];
 }
 
-console.log(parseInt(type_num));
+//결과 윈도우 출력
+switch(parseInt(parseInt(type_num)/4))
+{
+    case 0:
+        if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
+        {
+            document.querySelector("#home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items: center; width:31em; height:81em; min-height:81em; background-image:url(../4_result/1/3.png); background-size:100% 100%; background-repeat:no-repeat;");
+        }
+        if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
+        {
+            document.querySelector("#home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items: center; width:90%; height:142em; min-height:142em; background-image:url(../4_result/1/3.png); background-size:100% 100%; background-repeat:no-repeat;");
+        }
+        break;
+    case 1:
+        if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
+        {
+            document.querySelector("#home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items: center; width:31em; height:81em; min-height:81em; background-image:url(../4_result/2/3.png); background-size:100% 100%; background-repeat:no-repeat;");
+        }
+        if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
+        {
+            document.querySelector("#home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items: center; width:90%; height:142em; min-height:142em; background-image:url(../4_result/2/3.png); background-size:100% 100%; background-repeat:no-repeat;");
+        }
+        break;
+    case 2:
+        if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
+        {
+            document.querySelector("#home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items: center; width:31em; height:81em; min-height:81em; background-image:url(../4_result/3/3.png); background-size:100% 100%; background-repeat:no-repeat;");
+        }
+        if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
+        {
+            document.querySelector("#home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items: center; width:90%; height:142em; min-height:142em; background-image:url(../4_result/3/3.png); background-size:100% 100%; background-repeat:no-repeat;");
+        }
+        break;
+    case 3:
+        if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
+        {
+            document.querySelector("#home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items: center; width:31em; height:81em; min-height:81em; background-image:url(../4_result/4/3.png); background-size:100% 100%; background-repeat:no-repeat;");
+        }
+        if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
+        {
+            document.querySelector("#home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items: center; width:90%; height:142em; min-height:142em; background-image:url(../4_result/4/3.png); background-size:100% 100%; background-repeat:no-repeat;");
+        }
+        break;
+}
 
 //결과 출력 
-document.querySelector(".result > .text").innerText = result_type_text[parseInt(type_num)];
-document.querySelector(".result > .name").innerText = result_name_text[parseInt(type_num)];
+document.querySelector(".result > .text").innerText = result_type_text[parseInt(type_num)%16];
+document.querySelector(".result > .name").innerText = result_name_text[parseInt(type_num)%16];
 
+//텍스트 복사
+function copy_text()
+{
+    var temp_copy_text = document.createElement("textarea");
+    document.body.appendChild(temp_copy_text);
+    temp_copy_text.value = "#겜BTI #게임성향테스트 #나는_어떤_게이머인지_알아보자 #WCG2022";
+    temp_copy_text.select();
+    document.execCommand('copy');
+    document.body.removeChild(temp_copy_text);
+
+    window.alert("해시태그를 복사했습니다")
+}
+
+//테스트 다시 시작
 function test_restart()
 {
     if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
@@ -120,6 +177,80 @@ function test_restart()
         location.replace("../home.html")
     }
 }
+
+//공유 기능
+function test_share()
+{
+    //
+}
+/*
+Kakao.Link.createDefaultButton(PARAMETER);
+
+    Kakao.Link.createDefaultButton({
+        container: '#CONTAINER_ID',
+        objectType: 'feed',
+        content: {
+          title: '오늘의 디저트',
+          description: '아메리카노, 빵, 케익',
+          imageUrl:
+            'http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            androidExecutionParams: 'test',
+          },
+        },
+        itemContent: {
+          profileText: 'Kakao',
+          profileImageUrl: 'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+          titleImageUrl: 'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+          titleImageText: 'Cheese cake',
+          titleImageCategory: 'Cake',
+          items: [
+            {
+              item: 'Cake1',
+              itemOp: '1000원',
+            },
+            {
+              item: 'Cake2',
+              itemOp: '2000원',
+            },
+            {
+              item: 'Cake3',
+              itemOp: '3000원',
+            },
+            {
+              item: 'Cake4',
+              itemOp: '4000원',
+            },
+            {
+              item: 'Cake5',
+              itemOp: '5000원',
+            },
+          ],
+          sum: 'Total',
+          sumOp: '15000원',
+        },
+        social: {
+          likeCount: 10,
+          commentCount: 20,
+          sharedCount: 30,
+        },
+        buttons: [
+          {
+            title: '웹으로 이동',
+            link: {
+              mobileWebUrl: 'https://developers.kakao.com',
+            },
+          },
+          {
+            title: '앱으로 이동',
+            link: {
+              mobileWebUrl: 'https://developers.kakao.com',
+            },
+          },
+        ]
+      });
+*/
 
 function loading(next_function)
 {

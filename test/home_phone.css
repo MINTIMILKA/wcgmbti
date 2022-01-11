@@ -198,336 +198,418 @@ body
   ================================================================================*/
 
 
-  #body_middle #main_space_1
-  {
-      width:80%;
-      height:0px;
-  }
-  
-  /* 결과 화면 공백 */
-  #home_content .result #space_1
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-  
-      width:80%;
-      height:5%;
-  }
-  
-  /* 결과 텍스트 화면 */
-  #home_content .result .text
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items: center;
-  
-      width:80%;
-      height:8%;
-  }
-  
-  /* 결과 텍스트 화면 */
-  #home_content .result .img
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items: center;
-  
-      width:80%;
-      height:25%;
-  }
-  
-  /* 결과 설명 화면 */
-  #home_content .result .info_window
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items: center;
-  
-      width:80%;
-      height:32%;
-  
-      background-image:url(../4_result/1/2.png);
-      background-size:100% 95%;
-      background-repeat:no-repeat;
-  }
-  
-  /* 결과 주의사항 윈도우 화면 */
-  #home_content .result .warn_window
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items: center;
-  
-      width:80%;
-      height:28%;
-  
-      background-image:url(../4_result/1/4.png);
-      background-size:100% 95%;
-      background-repeat:no-repeat;
-  }
-  
-  /* 결과 화면 공백 */
-  #home_content .result #space_2
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-  
-      width:80%;
-      height:2%;
-  }
-  
-  #body_middle #main_space_2
-  {
-      width:80%;
-      height:30px;
-  }
-  
-  /* 이벤트 화면 공백 */
-  #event_window .result #space_1
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-  
-      width:80%;
-      height:5%;
-  }
-  
-  /* 텍스트: 해시태그 이벤트 */
-  #event_window .result .name
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-  
-      width:80%;
-      height:10%;
-  }
-  
-  /* 이벤트 텍스트 */
-  #event_window .result .text_1
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-  
-      width:80%;
-      height:10%;
-  }
-  
-  /* 텍스트: 이벤트 기간, 당첨자 발표 */
-  #event_window .result .text_2
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-  
-      width:80%;
-      height:10%;
-  }
-  
-  /* 텍스트: 이벤트 설명 */
-  #event_window .result .info_window_1
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-  
-      width:80%;
-      height:25%;
-  
-      background-image:url(../4_result/5/3.png);
-      background-size:100% 95%;
-      background-repeat:no-repeat;
-  }
-  
-  /* 텍스트: 당첨 상품 */
-  #event_window .result .text_3
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-  
-      width:80%;
-      height:4%;
-  }
-  
-  /* 텍스트: 치킨, 콜라 */
-  #event_window .result .text_4
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-  
-      width:80%;
-      height:10%;
-  }
-  
-  /* 유의사항 텍스트 */
-  #event_window .result .text_5
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-  
-      width:80%;
-      height:10%;
-  }
-  
-  /* 텍스트: 이벤트 설명 */
-  #event_window .result .info_window_2
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-  
-      width:80%;
-      height:13%;
-  
-      background-image:url(../4_result/5/4.png);
-      background-size:100% 95%;
-      background-repeat:no-repeat;
-  }
-  
-  /* 이벤트 화면 공백 */
-  #event_window .result #space_2
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-  
-      width:80%;
-      height:3%;
-  }
-  
-  #body_middle #main_space_3
-  {
-      width:80%;
-      height:30px;
-  }
-  
-  #home_button
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:end;
-      align-items: center;
-  
-      position:fixed;
-      bottom:-1.5%;
-  
-      width:100%;
-      height:15em;
-  }
-  
-  /* 결과 버튼 1개 화면 */
-  #home_button .result
-  {
-      display:flex;
-      flex-direction:row;
-      justify-content:center;
-      align-items: center;
-  
-      width:100%;
-      height:100%;
-  
-      background-image:url(../4_result/7/1.png);
-      background-size:100% 100%;
-  }
-  
-  /* 공유 사진 */
-  #home_button .result .img
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items: center;
-  
-      width:20%;
-      height:80%;
-  
-      background-image:url(../4_result/7/3.png);
-      background-position:center;
-      background-size:80% 80%;
-      background-repeat:no-repeat;
-  }
-  
-  /* 공유 버튼 */
-  #home_button .result .share
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items: center;
-  
-      width:60%;
-      height:80%;
-  }
-  
-  /* 공유 버튼 */
-  #home_button .result .share button
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items: center;
-  
-      width:100%;
-      height:80%;
-  
-      border:0;
-      outline:0;
-  
-      background:url(../4_result/7/4.png);
-      background-size:100% 100%;
-      background-repeat:no-repeat;
-  }
-  
-  /* 결과 버튼 */
-  #home_button .result .restart
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items: center;
-  
-      width:20%;
-      height:80%;
-  }
-  
-  /* 결과 버튼 */
-  #home_button .result .restart button
-  {
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items: center;
-  
-      width:90%;
-      height:90%;
-  
-      border:0;
-      outline:0;
-  
-      background:url(../4_result/7/2.png);
-      background-size:100% 100%;
-      background-repeat:no-repeat;
-  }
+#body_middle #main_space_1
+{
+    width:80%;
+    height:0px;
+}
+
+/* 결과 화면 공백 */
+#home_content .result #space_1
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:80%;
+    height:5%;
+}
+
+/* 결과 텍스트 화면 */
+#home_content .result .text
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+
+    width:80%;
+    height:8%;
+}
+
+/* 결과 텍스트 화면 */
+#home_content .result .img
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+
+    width:80%;
+    height:25%;
+}
+
+/* 결과 설명 화면 */
+#home_content .result .info_window
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+
+    width:80%;
+    height:32%;
+
+    background-image:url(../4_result/1/2.png);
+    background-size:100% 95%;
+    background-repeat:no-repeat;
+}
+
+/* 결과 주의사항 윈도우 화면 */
+#home_content .result .warn_window
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+
+    width:80%;
+    height:28%;
+
+    background-image:url(../4_result/1/4.png);
+    background-size:100% 95%;
+    background-repeat:no-repeat;
+}
+
+/* 결과 화면 공백 */
+#home_content .result #space_2
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:80%;
+    height:2%;
+}
+
+#body_middle #main_space_2
+{
+    width:80%;
+    height:30px;
+}
+
+/* 이벤트 화면 공백 */
+#event_window .result #space_1
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:80%;
+    height:5%;
+}
+
+/* 텍스트: 해시태그 이벤트 */
+#event_window .result .name
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:80%;
+    height:10%;
+}
+
+/* 이벤트 텍스트 */
+#event_window .result .text_1
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:80%;
+    height:10%;
+}
+
+/* 텍스트: 이벤트 기간, 당첨자 발표 */
+#event_window .result .text_2
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:80%;
+    height:10%;
+}
+
+/* 텍스트: 이벤트 설명 */
+#event_window .result .info_window_1
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:80%;
+    height:25%;
+
+    background-image:url(../4_result/5/3.png);
+    background-size:100% 95%;
+    background-repeat:no-repeat;
+}
+
+/* 텍스트: 당첨 상품 */
+#event_window .result .text_3
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:80%;
+    height:4%;
+}
+
+/* 텍스트: 치킨, 콜라 */
+#event_window .result .text_4
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:80%;
+    height:10%;
+}
+
+/* 유의사항 텍스트 */
+#event_window .result .text_5
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:80%;
+    height:10%;
+}
+
+/* 텍스트: 이벤트 설명 */
+#event_window .result .info_window_2
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:80%;
+    height:13%;
+
+    background-image:url(../4_result/5/4.png);
+    background-size:100% 95%;
+    background-repeat:no-repeat;
+}
+
+  /* 해시태그 윈도우 공간*/
+#event_window .result .info_window_2 .window_2_background_space_1
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    height:15%;
+}
+
+/* 해시태그 윈도우 화면*/
+#event_window .result .info_window_2 .window_2_background
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    height:80%;
+}
+
+/* 해시태그 복사 텍스트 */
+#event_window .result .info_window_2 .window_2_background #text
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:60%;
+    height:100%;
+}
+
+/* 해시태그 복사하기 버튼 화면*/
+#event_window .result .info_window_2 .window_2_background #copy_button
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:40%;
+    height:100%;
+}
+
+/* 해시태그 복사하기 버튼*/
+#event_window .result .info_window_2 .window_2_background #copy_button button
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    font-family: 'home_font';
+    font-size:1.8rem;
+    line-height:2;
+
+    width:75%;
+    height:75%;
+
+    border:0;
+
+    background:url(../4_result/5/1.png);
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+}
+
+/* 해시태그 윈도우 공간*/
+#event_window .result .info_window_2 .window_2_background_space_2
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    height:5%;
+}
+
+/* 이벤트 화면 공백 */
+#event_window .result #space_2
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:80%;
+    height:3%;
+}
+
+#body_middle #main_space_3
+{
+    width:80%;
+    height:30px;
+}
+
+#home_button
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:end;
+    align-items: center;
+
+    position:fixed;
+    bottom:-1.5%;
+
+    width:100%;
+    height:15em;
+}
+
+/* 결과 버튼 1개 화면 */
+#home_button .result
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+
+    width:100%;
+    height:100%;
+
+    background-image:url(../4_result/7/1.png);
+    background-size:100% 100%;
+}
+
+/* 공유 사진 */
+#home_button .result .img
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+
+    width:20%;
+    height:80%;
+
+    background-image:url(../4_result/7/3.png);
+    background-position:center;
+    background-size:80% 80%;
+    background-repeat:no-repeat;
+}
+
+/* 공유 버튼 */
+#home_button .result .share
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+
+    width:60%;
+    height:80%;
+}
+
+/* 공유 버튼 */
+#home_button .result .share button
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+
+    width:100%;
+    height:80%;
+
+    border:0;
+    outline:0;
+
+    background:url(../4_result/7/4.png);
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+}
+
+/* 결과 버튼 */
+#home_button .result .restart
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+
+    width:20%;
+    height:80%;
+}
+
+/* 결과 버튼 */
+#home_button .result .restart button
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+
+    width:90%;
+    height:90%;
+
+    border:0;
+    outline:0;
+
+    background:url(../4_result/7/2.png);
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+}

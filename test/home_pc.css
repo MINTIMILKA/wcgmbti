@@ -386,12 +386,12 @@ body
     height:10%;
 }
 
-/* 텍스트: 이벤트 설명 */
+/* 해시태그 윈도우 */
 #event_window .result .info_window_2
 {
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:end;
     align-items:center;
 
     width:80%;
@@ -400,6 +400,87 @@ body
     background-image:url(../4_result/5/4.png);
     background-size:100% 95%;
     background-repeat:no-repeat;
+}
+
+/* 해시태그 윈도우 공간*/
+#event_window .result .info_window_2 .window_2_background_space_1
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    height:15%;
+}
+
+/* 해시태그 윈도우 화면*/
+#event_window .result .info_window_2 .window_2_background
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    height:80%;
+}
+
+/* 해시태그 복사 텍스트 */
+#event_window .result .info_window_2 .window_2_background #text
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:60%;
+    height:100%;
+}
+
+/* 해시태그 복사하기 버튼 화면*/
+#event_window .result .info_window_2 .window_2_background #copy_button
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:40%;
+    height:100%;
+}
+
+/* 해시태그 복사하기 버튼*/
+#event_window .result .info_window_2 .window_2_background #copy_button button
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    font-family: 'home_font';
+    font-size:1.1rem;
+
+    width:75%;
+    height:75%;
+
+    border:0;
+
+    background:url(../4_result/5/1.png);
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+}
+
+/* 해시태그 윈도우 공간*/
+#event_window .result .info_window_2 .window_2_background_space_2
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    height:5%;
 }
 
 /* 이벤트 화면 공백 */

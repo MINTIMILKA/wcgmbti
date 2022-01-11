@@ -56,7 +56,6 @@ function test_start()
         document.querySelector("#main_window > #home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; width:100%; height:53%;");
         document.querySelector("#main_window > #home_button").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:100%; height:47%;");
         
-        
         //모든 테스트 관련 태그 생성(2개)
         var test_class_length = document.querySelectorAll(".test").length;
 
