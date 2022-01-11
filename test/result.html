@@ -2,16 +2,6 @@
 <meta charset="utf-8">
 <html lang="ko">
     <head>
-
-        <script type="text/javascript">
-            var oldUrl = 'http://34.64.176.60/wcgmbti/home.html'; // 기본 URL
-            var changeUrl = 'gamebti.com'; // 기본 URL로 사이트 접속 시 변경하고 싶은 URL
-            var urlString = location.href;
-            if (urlString.match(oldUrl)){
-                window.location.replace(urlString.replace(oldUrl, changeUrl));
-            }
-        </script>
-
         <!-- 
             스마트폰 가로: 420px
          -->
@@ -57,11 +47,34 @@
                     </div>
                     
                     <div class="info_window">
-                        <p>결과 설명</p>
+                        <div class="text">
+                            결과 설명
+                        </div>
                     </div>
 
                     <!-- 주의 사항 -->
                     <div class="warn_window">
+
+                        <div id="space_1"></div>
+                        
+                        <div class="text_div">
+                            <div id="space"></div>
+                            <div class="text"></div>
+                        </div>
+                        
+                        <div class="chemi_img">
+                            <div class="img_1">
+                                <div class="img"></div>
+                                <div class="text"></div>
+                            </div>
+                            <div class="img_2">
+                                <div class="img"></div>
+                                <div class="text"></div>
+                            </div>
+                        </div>
+
+                        <div id="space_2"></div>
+
                     </div>
 
                     <div id="space_2"></div>
@@ -117,7 +130,9 @@
 
                         <div class="window_2_background">
                             <div id="text">
-                                #겜BTI  #게임성향테스트
+                                <div>#겜BTI  #게임성향테스트</div>
+                                <div>#나는_어떤_게이머인지_알아보자</div>
+                                <div>#WCG2022</div>
                             </div>
                             <div id="copy_button">
                                 <button onclick="copy_text()">복사하기</button>
@@ -137,61 +152,63 @@
             <div id="main_space_3"></div>
         </div>
 
-        <input type="button" onclick="sendLinkCustom()" value="Custom"/>
+        
+        <!-- <input type="button" onclick="sendLinkCustom()" value="Custom"/>
         <script>
             function sendLinkCustom() {
-            Kakao.init('276e719d8448d0a0ea5ce688a4023792');
+            //Kakao.init('276e719d8448d0a0ea5ce688a4023792');
             Kakao.Link.sendCustom({
                 templateId:68513
             });
             }
         </script>
 
-<a id="create-kakao-link-btn" href="javascript:;">
-    <img
-      src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
-      alt="카카오링크 보내기 버튼"
-    />
-  </a>
-  <script type="text/javascript">
-      Kakao.init('276e719d8448d0a0ea5ce688a4023792');
-      
-    Kakao.Link.createDefaultButton({
-      container: '#create-kakao-link-btn',
-      objectType: 'feed',
-      content: {
-        title: '딸기 치즈 케익',
-        description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
-        imageUrl:
-          'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-        link: {
-          mobileWebUrl: 'https://developers.kakao.com',
-          webUrl: 'https://developers.kakao.com',
-        },
-      },
-      social: {
-        likeCount: 286,
-        commentCount: 45,
-        sharedCount: 845,
-      },
-      buttons: [
-        {
-          title: '웹으로 보기',
-          link: {
-            mobileWebUrl: 'https://developers.kakao.com',
-            webUrl: 'https://developers.kakao.com',
-          },
-        },
-        {
-          title: '앱으로 보기',
-          link: {
-            mobileWebUrl: 'https://developers.kakao.com',
-            webUrl: 'https://developers.kakao.com',
-          },
-        },
-      ],
-    })
-  </script>
+        <a id="create-kakao-link-btn" href="javascript:;">
+            <img
+            src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+            alt="카카오링크 보내기 버튼"
+            />
+        </a>
+
+        <script type="text/javascript">
+            Kakao.init('276e719d8448d0a0ea5ce688a4023792');
+            
+            Kakao.Link.createDefaultButton({
+            container: '#create-kakao-link-btn',
+            objectType: 'feed',
+            content: {
+                title: '딸기 치즈 케익',
+                description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+                imageUrl:
+                'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+                link: {
+                mobileWebUrl: 'https://developers.kakao.com',
+                webUrl: 'https://developers.kakao.com',
+                },
+            },
+            social: {
+                likeCount: 286,
+                commentCount: 45,
+                sharedCount: 845,
+            },
+            buttons: [
+                {
+                title: '웹으로 보기',
+                link: {
+                    mobileWebUrl: 'https://developers.kakao.com',
+                    webUrl: 'https://developers.kakao.com',
+                },
+                },
+                {
+                title: '앱으로 보기',
+                link: {
+                    mobileWebUrl: 'https://developers.kakao.com',
+                    webUrl: 'https://developers.kakao.com',
+                },
+                },
+            ],
+            })
+        </script> -->
 
         <!-- 아래쪽 배경 -->
         <div id="body_bottom">
