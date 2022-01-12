@@ -385,10 +385,12 @@ function test_share()
     Kakao.Link.sendCustom
     (
       {
-        templateId:68513, 
-        imageUrl:'http://www.gamebti.com/4_result/8/20.png'
+        templateId:68513
       }
     );
+    Kakao.Link.uploadImage({
+      file: 'http://www.gamebti.com/4_result/8/20.png'
+    });
 }
 
 function loading(next_function)
