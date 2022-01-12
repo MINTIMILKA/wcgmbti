@@ -388,6 +388,9 @@ function test_share()
         templateId:68513
       }
     );
+    Kakao.Link.uploadImage({
+      file: '../4_result/8/20.png'
+    });
 }
 
 function loading(next_function)
