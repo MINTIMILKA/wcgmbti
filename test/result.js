@@ -385,12 +385,9 @@ function test_share()
     Kakao.Link.sendCustom
     (
       {
-        templateId:68513
+        templateId:68701
       }
     );
-    Kakao.Link.uploadImage({
-      file: '../4_result/8/20.png'
-    });
 }
 
 function loading(next_function)
