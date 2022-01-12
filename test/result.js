@@ -111,7 +111,7 @@ for(var i=result_address.indexOf("type")+"type".length+1;i<result_address.length
     type_num = type_num + result_address[i];
 }
 
-//결과 윈도우 출력
+//결과 윈도우, 정보 윈도우 출력
 switch(parseInt(parseInt(type_num)/4))
 {
   case 0:
@@ -123,6 +123,7 @@ switch(parseInt(parseInt(type_num)/4))
     {
         document.querySelector("#home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items: center; width:90%; height:142em; min-height:142em; background-image:url(../4_result/1/3.png); background-size:100% 100%; background-repeat:no-repeat;");
     }
+    document.querySelector("#home_content .result .info_window").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:80%; height:37%; background-image:url(../4_result/1/2.png); background-size:100% 95%; background-repeat:no-repeat;");
     break;
   case 1:
     if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
@@ -133,6 +134,7 @@ switch(parseInt(parseInt(type_num)/4))
     {
         document.querySelector("#home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items: center; width:90%; height:142em; min-height:142em; background-image:url(../4_result/2/3.png); background-size:100% 100%; background-repeat:no-repeat;");
     }
+    document.querySelector("#home_content .result .info_window").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:80%; height:37%; background-image:url(../4_result/2/2.png); background-size:100% 95%; background-repeat:no-repeat;");
     break;
   case 2:
     if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
@@ -143,6 +145,7 @@ switch(parseInt(parseInt(type_num)/4))
     {
         document.querySelector("#home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items: center; width:90%; height:142em; min-height:142em; background-image:url(../4_result/3/3.png); background-size:100% 100%; background-repeat:no-repeat;");
     }
+    document.querySelector("#home_content .result .info_window").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:80%; height:37%; background-image:url(../4_result/3/2.png); background-size:100% 95%; background-repeat:no-repeat;");
     break;
   case 3:
     if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
@@ -153,6 +156,7 @@ switch(parseInt(parseInt(type_num)/4))
     {
         document.querySelector("#home_content").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items: center; width:90%; height:142em; min-height:142em; background-image:url(../4_result/4/3.png); background-size:100% 100%; background-repeat:no-repeat;");
     }
+    document.querySelector("#home_content .result .info_window").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:80%; height:37%; background-image:url(../4_result/4/2.png); background-size:100% 95%; background-repeat:no-repeat;");
     break;
 }
 
