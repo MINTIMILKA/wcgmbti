@@ -387,61 +387,136 @@ function test_share()
   switch(parseInt(type_num)%16)
   {
     case 0:
-      temp_num = parseInt(68702);
+      Kakao.Link.sendCustom
+      (
+        {
+          templateId:68702
+        }
+      );
     break;
     case 1:
-      temp_num = parseInt(68703);
+      Kakao.Link.sendCustom
+      (
+        {
+          templateId:68703
+        }
+      );
     break;
     case 2:
-      temp_num = parseInt(68704);
+      Kakao.Link.sendCustom
+      (
+        {
+          templateId:68704
+        }
+      );
     break;
     case 3:
-      temp_num = parseInt(68705);
+      Kakao.Link.sendCustom
+      (
+        {
+          templateId:68705
+        }
+      );
     break;
     case 4:
-      temp_num = parseInt(68706);
+      Kakao.Link.sendCustom
+      (
+        {
+          templateId:68706
+        }
+      );
     break;
     case 5:
-      temp_num = parseInt(68707);
+      Kakao.Link.sendCustom
+      (
+        {
+          templateId:68707
+        }
+      );
     break;
     case 6:
-      temp_num = parseInt(68708);
+      Kakao.Link.sendCustom
+      (
+        {
+          templateId:68708
+        }
+      );
     break;
     case 7:
-      temp_num = parseInt(68709);
+      Kakao.Link.sendCustom
+      (
+        {
+          templateId:68709
+        }
+      );
     break;
     case 8:
-      temp_num = parseInt(68710);
+      Kakao.Link.sendCustom
+      (
+        {
+          templateId:68710
+        }
+      );
     break;
     case 9:
-      temp_num = parseInt(68711);
+      Kakao.Link.sendCustom
+      (
+        {
+          templateId:68711
+        }
+      );
     break;
     case 10:
-      temp_num = parseInt(68712);
+      Kakao.Link.sendCustom
+      (
+        {
+          templateId:68712
+        }
+      );
     break;
     case 11:
-      temp_num = parseInt(68713);
+      Kakao.Link.sendCustom
+      (
+        {
+          templateId:68713
+        }
+      );
     break;
     case 12:
-      temp_num = parseInt(68714);
+      Kakao.Link.sendCustom
+      (
+        {
+          templateId:68714
+        }
+      );
     break;
     case 13:
-      temp_num = parseInt(68715);
+      Kakao.Link.sendCustom
+      (
+        {
+          templateId:68715
+        }
+      );
     break;
     case 14:
-      temp_num = parseInt(68716);
+      Kakao.Link.sendCustom
+      (
+        {
+          templateId:68716
+        }
+      );
     break;
     case 15:
-      temp_num = parseInt(68717);
+      Kakao.Link.sendCustom
+      (
+        {
+          templateId:68717
+        }
+      );
     break;
   }
 
-    Kakao.Link.sendCustom
-    (
-      {
-        templateId:temp_num
-      }
-    );
+    
 }
 
 function loading(next_function)
