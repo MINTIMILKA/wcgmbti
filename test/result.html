@@ -39,7 +39,6 @@
                     <div id="space_1"></div>
 
                     <div class="text">
-                        결과 텍스트
                     </div>
                     
                     <!-- 결과 사진 -->
@@ -97,7 +96,6 @@
                     <div id="space_1"></div>
                     
                     <div class="name">
-                        해시태그 이벤트
                     </div>
 
                     <div class="text_1">
@@ -105,19 +103,53 @@
                     </div>
 
                     <div class="text_2">
-                        이벤트 기간, 당첨자 발표
+                        <div class="text_2_1">
+                            <div class="text_2_1_name"></div>
+                            <div class="text_2_1_text">1.13 (목) ~ 1.25 (화)</div>
+                        </div>
+                        <div class="text_2_2">
+                            <div class="text_2_2_name"></div>
+                            <div class="text_2_2_text">1.27 (목)</div>
+                        </div>
                     </div>
+
+                    <div id="space_2"></div>
 
                     <div class="info_window_1">
-                        이벤트 설명
+                        
+                        <div id="space_1"  style="height:10%"></div>
+
+                        <div class="info_text_1">
+                            <div id="space" style="width:2%;"></div>
+                            <div id="num_1"></div>
+                            <div id="text_1">겜BTI 테스트 후, 결과 화면 캡쳐하기</div>
+                        </div>
+                        <div class="info_text_2">
+                            <div id="space" style="width:2%;"></div>
+                            <div id="num_2"></div>
+                            <div id="text_2">해시태그 복사 버튼 클릭하기</div>
+                        </div>
+                        <div class="info_text_3">
+                            <div id="space" style="width:2%;"></div>
+                            <div id="num_3"></div>
+                            <div id="text_3">WCG공식 계정(@wcg.official) 팔로우하기</div>
+                        </div>
+                        <div class="info_text_4">
+                            <div id="space" style="width:2%;"></div>
+                            <div id="num_4"></div>
+                            <div id="text_4">@wcg.official 태그하고, 해시태그와 함께 결과화면 공유하면 끄-읕!!</div>
+                        </div>
+
+                        <div id="space_2" style="height:10%"></div>
+
                     </div>
 
+                    <!-- 당첨 상품 -->
                     <div class="text_3">
-                        당첨 상품
                     </div>
 
+                    <!-- 치킨, 콜라 -->
                     <div class="text_4">
-                        치킨, 콜라
                     </div>
 
                     <div class="text_5">
@@ -129,6 +161,7 @@
                         <div class="window_2_background_space_1"></div>
 
                         <div class="window_2_background">
+                            <div id="space"></div>
                             <div id="text">
                                 <div>#겜BTI  #게임성향테스트</div>
                                 <div>#나는_어떤_게이머인지_알아보자</div>
@@ -152,62 +185,6 @@
             <div id="main_space_3"></div>
         </div>
 
-        <script>
-            function sendLinkCustom() {
-            Kakao.init('276e719d8448d0a0ea5ce688a4023792');
-            Kakao.Link.sendCustom({
-                templateId:68513
-            });
-            }
-        </script>
-
-        <!-- <a id="create-kakao-link-btn" href="javascript:;">
-            <img
-            src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
-            alt="카카오링크 보내기 버튼"
-            />
-        </a>
-
-        <script type="text/javascript">
-            Kakao.init('276e719d8448d0a0ea5ce688a4023792');
-            
-            Kakao.Link.createDefaultButton({
-            container: '#create-kakao-link-btn',
-            objectType: 'feed',
-            content: {
-                title: '딸기 치즈 케익',
-                description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
-                imageUrl:
-                'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-                link: {
-                mobileWebUrl: 'https://developers.kakao.com',
-                webUrl: 'https://developers.kakao.com',
-                },
-            },
-            social: {
-                likeCount: 286,
-                commentCount: 45,
-                sharedCount: 845,
-            },
-            buttons: [
-                {
-                title: '웹으로 보기',
-                link: {
-                    mobileWebUrl: 'https://developers.kakao.com',
-                    webUrl: 'https://developers.kakao.com',
-                },
-                },
-                {
-                title: '앱으로 보기',
-                link: {
-                    mobileWebUrl: 'https://developers.kakao.com',
-                    webUrl: 'https://developers.kakao.com',
-                },
-                },
-            ],
-            })
-        </script> -->
-
         <!-- 아래쪽 배경 -->
         <div id="body_bottom">
             <div id="bottom_left"></div>
@@ -222,7 +199,7 @@
             <!-- 결과 -->
             <div class="result"  style="display:''">
 
-                <div class="img"></div>
+                <div class="img" onclick="location.href='https://www.instagram.com/wcg.official';"></div>
                 <div class="share">
                     <!-- 공유 버튼 -->
                     <button onclick="test_share()" img></button>

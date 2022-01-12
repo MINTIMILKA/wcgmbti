@@ -157,7 +157,7 @@ switch(parseInt(parseInt(type_num)/4))
 }
 
 //결과 출력
-document.querySelector(".result > .text").innerText = result_name_text[parseInt(type_num)%16];
+document.querySelector(".result .text").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:80%; height:14%; background:url(../4_result/8/" + (parseInt(type_num)%16 + 1) + ".png); background-size:contain; background-repeat:no-repeat; background-position:center;");
 
 //결과 이미지 넣기
 document.querySelector("#home_content .result .img").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items: center; width:70%; height:20%; background:url(../4_result/" + (parseInt((parseInt(type_num)%16)/4) + 1) + "/" + ((parseInt(type_num)%4) + 5) + ".png); background-size:contain; background-repeat:no-repeat; background-position:center;");
@@ -317,19 +317,8 @@ if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and
 //해시태그 이벤트 설명 텍스트 출력 
 document.querySelector("#event_window .result .text_1").innerText = "나의 겜BTI 유형 공유하고,\n 현생에서 \'기프티콘\' 득템하자!";
 
-//텍스트: 이벤트 기간, 당첨자 발표
-document.querySelector("#event_window .result .text_2").innerText = "*이벤트 기간 1.13(목) ~ 1.25(화)\n*당첨자 발표 1.27(목)";
-
-//텍스트: 이벤트 참여방법 설명
-document.querySelector("#event_window .result .info_window_1").innerHTML = "<div>1 겜BTI 테스트 후, 결과 화면 캡쳐하기</div><div>2 해시태그 복사 버튼 클릭하기</div><div>3 WCG공식 계정</div><div>WCG공식 계정(@wcg.official) 팔로우하기</div><div>4 @wcg.official 태그하고, 해시태그와 함께 결과화면 공유하면 끄-읕!!</div>";
-
-//텍스트: 당첨 상품 (생략)
-
-//텍스트: 치킨, 콜라
-document.querySelector("#event_window .result .text_4").innerText = "BBQ 황금올리브유 치킨 + 콜라 1.25L (25명)\n베스킨라빈스 파인트(50명)\n빽다방 아이스 아메리카노(70명)";
-
 //유의사항 텍스트
-document.querySelector("#event_window .result .text_5").innerHTML = "<div>- 당첨자는 WCG 공식 인스타그램 DM으로 개별 발표 예정입니다.</div><div>-비공개 계정은 당첨에서 제외될 수 있으니 확인해주세요.</div><div>-당첨자 발표일 기준 WCG 공식 계정을 팔로우 하지 않았을 경우, 당첨에서 제외될 수 있습니다.<div>"
+document.querySelector("#event_window .result .text_5").innerHTML = "<div>- 당첨자는 WCG 공식 인스타그램 DM으로 개별 발표 예정입니다.</div><div>- 비공개 계정은 당첨에서 제외될 수 있으니 확인해주세요.</div><div>- 당첨자 발표일 기준 WCG 공식 계정을 팔로우 하지 않았을 경우, 당첨에서 제외될 수 있습니다.<div>"
 
 //텍스트 복사
 function copy_text()
@@ -387,82 +376,17 @@ function test_restart()
     }
 }
 
+//카카오 공유 번호 미리 등록
+Kakao.init('276e719d8448d0a0ea5ce688a4023792');
+
 //공유 기능
 function test_share()
 {
-    Kakao.init('276e719d8448d0a0ea5ce688a4023792');
     Kakao.Link.sendCustom({
-        templateId:68513
+        templateId:68513, 
+        titleImageUrl:"../4_result/7/" + (parseInt(type_num)%16 + 5) + ".png"
     });
 }
-/*
-Kakao.Link.createDefaultButton(PARAMETER);
-
-    Kakao.Link.createDefaultButton({
-        container: '#CONTAINER_ID',
-        objectType: 'feed',
-        content: {
-          title: '오늘의 디저트',
-          description: '아메리카노, 빵, 케익',
-          imageUrl:
-            'http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
-          link: {
-            mobileWebUrl: 'https://developers.kakao.com',
-            androidExecutionParams: 'test',
-          },
-        },
-        itemContent: {
-          profileText: 'Kakao',
-          profileImageUrl: 'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-          titleImageUrl: 'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-          titleImageText: 'Cheese cake',
-          titleImageCategory: 'Cake',
-          items: [
-            {
-              item: 'Cake1',
-              itemOp: '1000원',
-            },
-            {
-              item: 'Cake2',
-              itemOp: '2000원',
-            },
-            {
-              item: 'Cake3',
-              itemOp: '3000원',
-            },
-            {
-              item: 'Cake4',
-              itemOp: '4000원',
-            },
-            {
-              item: 'Cake5',
-              itemOp: '5000원',
-            },
-          ],
-          sum: 'Total',
-          sumOp: '15000원',
-        },
-        social: {
-          likeCount: 10,
-          commentCount: 20,
-          sharedCount: 30,
-        },
-        buttons: [
-          {
-            title: '웹으로 이동',
-            link: {
-              mobileWebUrl: 'https://developers.kakao.com',
-            },
-          },
-          {
-            title: '앱으로 이동',
-            link: {
-              mobileWebUrl: 'https://developers.kakao.com',
-            },
-          },
-        ]
-      });
-*/
 
 function loading(next_function)
 {

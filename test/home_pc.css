@@ -4,6 +4,11 @@
     font-family:home_font;
     src:url('../DungGeunMo.ttf');
 }
+@font-face
+{
+    font-family:result_font;
+    src:url('../SCDream6.otf');
+}
 
 /* 전체 화면 */
 html
@@ -143,6 +148,7 @@ body
     background-size:100% 100%;
     background-repeat:no-repeat;
 }
+
 #home_content div
 {
     display:flex;
@@ -236,7 +242,7 @@ body
     justify-content:center;
     align-items: center;
 
-    width:90%;
+    width:70%;
     height:20%;
 }
 
@@ -462,7 +468,7 @@ body
     align-items:center;
 
     width:80%;
-    height:5%;
+    height:3%;
 }
 
 /* 텍스트: 해시태그 이벤트 */
@@ -473,8 +479,13 @@ body
     justify-content:center;
     align-items:center;
     
-    width:80%;
-    height:10%;
+    width:90%;
+    height:12%;
+
+    background-image:url(../4_result/8/25.png);
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 /* 이벤트 텍스트 */
@@ -486,10 +497,10 @@ body
     align-items:center;
 
     font-family:'home_font';
-    font-size:1.1em;
+    font-size:1.3em;
 
     width:80%;
-    height:10%;
+    height:7%;
 }
 
 /* 텍스트: 이벤트 기간, 당첨자 발표 */
@@ -499,12 +510,91 @@ body
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    
-    font-family:'home_font';
-    font-size:1.1em;
 
     width:80%;
     height:10%;
+}
+
+#event_window .result .text_2 .text_2_1
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    height:50%;
+}
+
+#event_window .result .text_2 .text_2_1 .text_2_1_name
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:30%;
+    height:100%;
+
+    background-image:url(../4_result/8/23.png);
+    background-position:center;
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+#event_window .result .text_2 .text_2_1 .text_2_1_text
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+
+    font-family:'home_font';
+    font-size:1.3em;
+
+    width:70%;
+    height:100%;
+}
+
+#event_window .result .text_2 .text_2_2
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    height:50%;
+}
+
+#event_window .result .text_2 .text_2_2 .text_2_2_name
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:30%;
+    height:100%;
+
+    background-image:url(../4_result/8/24.png);
+    background-position:center;
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+#event_window .result .text_2 .text_2_2 .text_2_2_text
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+
+    font-family:'home_font';
+    font-size:1.3em;
+
+    width:70%;
+    height:100%;
 }
 
 /* 텍스트: 이벤트 참여방법 설명 */
@@ -512,8 +602,11 @@ body
 {
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:start;
     align-items:flex-start;
+
+    font-family:result_font;
+    font-size:1.1em;
 
     width:80%;
     height:25%;
@@ -521,6 +614,158 @@ body
     background-image:url(../4_result/5/3.png);
     background-size:100% 95%;
     background-repeat:no-repeat;
+}
+
+#event_window .result .info_window_1 .info_text_1
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    height:20%;
+}
+
+#event_window .result .info_window_1 .info_text_1 #num_1
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:10%;
+    height:68%;
+
+    background-image:url(../4_result/8/18.png);
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+#event_window .result .info_window_1 .info_text_1 #text_1
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+
+    width:100%;
+    height:100%;
+}
+
+#event_window .result .info_window_1 .info_text_2
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    height:20%;
+}
+
+#event_window .result .info_window_1 .info_text_2 #num_2
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:10%;
+    height:68%;
+
+    background-image:url(../4_result/8/19.png);
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+#event_window .result .info_window_1 .info_text_2 #text_2
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+
+    width:100%;
+    height:100%;
+}
+
+#event_window .result .info_window_1 .info_text_3
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    height:20%;
+}
+
+#event_window .result .info_window_1 .info_text_3 #num_3
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:10%;
+    height:68%;
+
+    background-image:url(../4_result/8/20.png);
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+#event_window .result .info_window_1 .info_text_3 #text_3
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+
+    width:100%;
+    height:100%;
+}
+
+#event_window .result .info_window_1 .info_text_4
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    height:20%;
+}
+
+#event_window .result .info_window_1 .info_text_4 #num_4
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    width:10%;
+    height:68%;
+
+    background-image:url(../4_result/8/21.png);
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+#event_window .result .info_window_1 .info_text_4 #text_4
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+
+    width:100%;
+    height:100%;
 }
 
 /* 텍스트: 당첨 상품 */
@@ -531,11 +776,13 @@ body
     justify-content:center;
     align-items:center;
 
-    font-family:'home_font';
-    font-size:1.1em;
-
     width:80%;
     height:4%;
+
+    background-image:url(../4_result/8/22.png);
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 /* 텍스트: 치킨, 콜라 */
@@ -546,11 +793,13 @@ body
     justify-content:center;
     align-items:center;
 
-    font-family:'home_font';
-    font-size:1.1em;
-
-    width:80%;
+    width:90%;
     height:10%;
+
+    background-image:url(../4_result/8/17.png);
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 /* 유의사항 텍스트 */
@@ -559,10 +808,10 @@ body
     display:flex;
     flex-direction:column;
     justify-content:center;
-    align-items:center;
+    align-items:flex-start;
 
     font-family:'home_font';
-    font-size:1.1em;
+    font-size:0.8em;
 
     width:80%;
     height:10%;
@@ -608,6 +857,13 @@ body
     height:80%;
 }
 
+/* 해시태그 윈도우 공백 */
+#event_window .result .info_window_2 .window_2_background #space
+{
+    width:5%;
+    height:100%;
+}
+
 /* 해시태그 복사 텍스트 */
 #event_window .result .info_window_2 .window_2_background #text
 {
@@ -616,9 +872,11 @@ body
     justify-content:center;
     align-items:flex-start;
 
+    
+    font-family:result_font;
     font-size:0.9em;
 
-    width:60%;
+    width:57%;
     height:100%;
 }
 
@@ -630,7 +888,7 @@ body
     justify-content:center;
     align-items:center;
 
-    width:40%;
+    width:38%;
     height:100%;
 }
 
