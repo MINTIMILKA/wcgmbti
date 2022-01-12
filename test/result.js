@@ -377,15 +377,69 @@ function test_restart()
 }
 
 //카카오 공유 번호 미리 등록
-Kakao.init('276e719d8448d0a0ea5ce688a4023792');
+Kakao.init('	ec7a714ed4f6e4e454edad6c7ab7f0cb');
 
 //공유 기능
 function test_share()
 {
+  var temp_num;
+
+  switch(parseInt(type_num)%16)
+  {
+    case 0:
+      temp_num = parseInt(68702);
+    break;
+    case 1:
+      temp_num = parseInt(68703);
+    break;
+    case 2:
+      temp_num = parseInt(68704);
+    break;
+    case 3:
+      temp_num = parseInt(68705);
+    break;
+    case 4:
+      temp_num = parseInt(68706);
+    break;
+    case 5:
+      temp_num = parseInt(68707);
+    break;
+    case 6:
+      temp_num = parseInt(68708);
+    break;
+    case 7:
+      temp_num = parseInt(68709);
+    break;
+    case 8:
+      temp_num = parseInt(68710);
+    break;
+    case 9:
+      temp_num = parseInt(68711);
+    break;
+    case 10:
+      temp_num = parseInt(68712);
+    break;
+    case 11:
+      temp_num = parseInt(68713);
+    break;
+    case 12:
+      temp_num = parseInt(68714);
+    break;
+    case 13:
+      temp_num = parseInt(68715);
+    break;
+    case 14:
+      temp_num = parseInt(68716);
+    break;
+    case 15:
+      temp_num = parseInt(68717);
+    break;
+  }
+
     Kakao.Link.sendCustom
     (
       {
-        templateId:68701
+        templateId:temp_num
       }
     );
 }
