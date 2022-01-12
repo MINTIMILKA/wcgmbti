@@ -377,7 +377,7 @@ function test_restart()
 }
 
 //카카오 공유 번호 미리 등록
-Kakao.init('	ec7a714ed4f6e4e454edad6c7ab7f0cb');
+Kakao.init('ec7a714ed4f6e4e454edad6c7ab7f0cb');
 
 //공유 기능
 function test_share()
