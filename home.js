@@ -791,7 +791,7 @@ function start_loading(next_function)
         document.querySelector(".loading").setAttribute("style", "display:''");
         
         //배경화면 변경
-        document.querySelector("#body_top").setAttribute("style", "display:flex; flex-direction:row; justify-content:start; align-items:center; width:100%; height:20%; background-image:url(3_test/background_1.png); background-size:contain; background-repeat:no-repeat; width:100%; height:109px; background-color:rgb(0, 128, 128);");
+        document.querySelector("#body_top").setAttribute("style", "display:flex; flex-direction:row; justify-content:start; align-items:center; width:100%; height:20%; background-image:url(3_test/background_1.png); background-size:contain; background-repeat:no-repeat; width:100%; height:12%; background-color:rgb(0, 128, 128);");
         document.querySelector("#body_middle").setAttribute("style", "display:flex; flex-direction:column; justify-content:center; align-items:center; flex:1; width:100%; background:rgb(0, 128, 128);");
         document.querySelector("#body_bottom > #bottom_left").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; width:384px; height:100%; background-image:url(3_test/background_2.png); background-size: cover; background-repeat:no-repeat;");
         
