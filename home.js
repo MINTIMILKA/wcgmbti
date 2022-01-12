@@ -138,35 +138,26 @@ function test_select_1()
                 //질문 글자 크기 변경 
                 if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
                 {
-                    document.querySelector(".test > .question").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:60%;");
+                    document.querySelector(".test > .question").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:50%;");
                     document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:1.7em; line-height:140%; letter-spacing:-0.1em; height:100%;");
                 }
                 if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
                 {
-                    document.querySelector(".test > .question").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:60%;");
+                    document.querySelector(".test > .question").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:50%;");
                     document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:3em; line-height:140%; letter-spacing:-0.1em; height:100%;");
                 }
 
                 //질문 그림 크기 변경
-                document.querySelector(".test > .image").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:23%;");
+                document.querySelector(".test > .image").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:45%;");
                 document.querySelectorAll(".test > .question > #q_img > img")[0].setAttribute("height", "20%");
 
                 //현재 문항의 이미지 크기 변경
                 document.querySelector(".test > .image > #img_1").setAttribute("height", "90%");
-                document.querySelector(".test > .image > #img_2").setAttribute("height", "90%");
-                document.querySelector(".test > .image > #img_3").setAttribute("height", "90%");
-                document.querySelector(".test > .image > #img_4").setAttribute("height", "90%");
 
                 //현재 문항의 이미지 생성
                 document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/3/1.png");
-                document.querySelector(".test > .image > #img_2").setAttribute("src", "3_test/3/2.png");
-                document.querySelector(".test > .image > #img_3").setAttribute("src", "3_test/3/3.png");
-                document.querySelector(".test > .image > #img_4").setAttribute("src", "3_test/3/4.png");
 
-                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; right:16%;");
-                document.querySelector(".test > .image > #img_2").setAttribute("style", "display:''; position:relative; left:23%;");
-                document.querySelector(".test > .image > #img_3").setAttribute("style", "display:'';");
-                document.querySelector(".test > .image > #img_4").setAttribute("style", "display:''; position:relative; left:16%;");
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; bottom:15%;");
 
                 break;
             case 3:
@@ -175,6 +166,9 @@ function test_select_1()
                 document.querySelector(".test > .image > #img_2").setAttribute("style", "display:none;");
                 document.querySelector(".test > .image > #img_3").setAttribute("style", "display:none;");
                 document.querySelector(".test > .image > #img_4").setAttribute("style", "display:none;");
+
+                //질문 그림 크기 변경
+                document.querySelector(".test > .image").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:25%;");
 
                 //현재 문항의 이미지 크기 변경
                 document.querySelector(".test > .image > #img_1").setAttribute("height", "80%");
@@ -194,7 +188,7 @@ function test_select_1()
                 //현재 문항의 이미지 생성
                 document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/5/1.png");
 
-                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; top:15%;");
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative;");
                 break;
             case 5:
                 //이전 문항에서 이미지 제거
@@ -215,8 +209,23 @@ function test_select_1()
                 document.querySelector(".test > .image > #img_1").setAttribute("style", "display:'';");
                 break;
             case 7:
+                //질문 글자 크기 변경 
+                if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
+                {
+                    document.querySelector(".test > .question").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:50%;");
+                    document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:1.5em; line-height:140%; letter-spacing:-0.1em; height:100%;");
+                }
+                if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
+                {
+                    document.querySelector(".test > .question").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:50%;");
+                    document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:2.7em; line-height:140%; letter-spacing:-0.1em; height:100%;");
+                }
+
                 //이전 문항에서 이미지 제거
                 document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+
+                //질문 그림 크기 변경
+                document.querySelector(".test > .image").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:35%;");
 
                 //현재 문항의 이미지 생성
                 document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/8/1.png");
@@ -238,6 +247,9 @@ function test_select_1()
                     document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:3.8em; line-height:140%; letter-spacing:-0.1em; height:100%;");
                 }
 
+                //질문 그림 크기 변경
+                document.querySelector(".test > .image").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:25%;");
+
                 //현재 문항의 이미지 크기 변경
                 if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
                 {
@@ -255,8 +267,8 @@ function test_select_1()
                 document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/9/2.png");
                 document.querySelector(".test > .image > #img_2").setAttribute("src", "3_test/9/1.png");
                 
-                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; top:5%; right:15%;");
-                document.querySelector(".test > .image > #img_2").setAttribute("style", "display:''; position:relative; top:5%; left:15%;");
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; bottom:20%; left:35%;");
+                document.querySelector(".test > .image > #img_2").setAttribute("style", "display:''; position:relative; bottom:20%; right:35%;");
                 break;
             case 9:
                 //이전 문항에서 이미지 제거
@@ -285,6 +297,16 @@ function test_select_1()
                 //이전 문항에서 이미지 제거
                 document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
                 
+                //질문 글자 크기 변경 
+                if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
+                {
+                    document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:1.5em; line-height:140%; letter-spacing:-0.1em; height:100%;");
+                }
+                if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
+                {
+                    document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:2.7em; line-height:140%; letter-spacing:-0.1em; height:100%;");
+                }
+
                 //현재 문항의 이미지 크기 변경
                 document.querySelector(".test > .image > #img_1").setAttribute("height", "80%");
 
@@ -296,6 +318,16 @@ function test_select_1()
             case 11:
                 //이전 문항에서 이미지 제거
                 document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+
+                //질문 글자 크기 변경 
+                if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
+                {
+                    document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:1.7em; line-height:140%; letter-spacing:-0.1em; height:100%;");
+                }
+                if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
+                {
+                    document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:3em; line-height:140%; letter-spacing:-0.1em; height:100%;");
+                }
                 
                 //현재 문항의 이미지 생성
                 document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/12/1.png");
@@ -450,35 +482,26 @@ function test_select_2()
                 //질문 글자 크기 변경 
                 if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
                 {
-                    document.querySelector(".test > .question").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:60%;");
+                    document.querySelector(".test > .question").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:50%;");
                     document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:1.7em; line-height:140%; letter-spacing:-0.1em; height:100%;");
                 }
                 if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
                 {
-                    document.querySelector(".test > .question").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:60%;");
+                    document.querySelector(".test > .question").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:50%;");
                     document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:3em; line-height:140%; letter-spacing:-0.1em; height:100%;");
                 }
 
                 //질문 그림 크기 변경
-                document.querySelector(".test > .image").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:23%;");
+                document.querySelector(".test > .image").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:45%;");
                 document.querySelectorAll(".test > .question > #q_img > img")[0].setAttribute("height", "20%");
 
                 //현재 문항의 이미지 크기 변경
                 document.querySelector(".test > .image > #img_1").setAttribute("height", "90%");
-                document.querySelector(".test > .image > #img_2").setAttribute("height", "90%");
-                document.querySelector(".test > .image > #img_3").setAttribute("height", "90%");
-                document.querySelector(".test > .image > #img_4").setAttribute("height", "90%");
 
                 //현재 문항의 이미지 생성
                 document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/3/1.png");
-                document.querySelector(".test > .image > #img_2").setAttribute("src", "3_test/3/2.png");
-                document.querySelector(".test > .image > #img_3").setAttribute("src", "3_test/3/3.png");
-                document.querySelector(".test > .image > #img_4").setAttribute("src", "3_test/3/4.png");
 
-                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; right:16%;");
-                document.querySelector(".test > .image > #img_2").setAttribute("style", "display:''; position:relative; left:23%;");
-                document.querySelector(".test > .image > #img_3").setAttribute("style", "display:'';");
-                document.querySelector(".test > .image > #img_4").setAttribute("style", "display:''; position:relative; left:16%;");
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; bottom:15%;");
 
                 break;
             case 3:
@@ -487,6 +510,9 @@ function test_select_2()
                 document.querySelector(".test > .image > #img_2").setAttribute("style", "display:none;");
                 document.querySelector(".test > .image > #img_3").setAttribute("style", "display:none;");
                 document.querySelector(".test > .image > #img_4").setAttribute("style", "display:none;");
+
+                //질문 그림 크기 변경
+                document.querySelector(".test > .image").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:25%;");
 
                 //현재 문항의 이미지 크기 변경
                 document.querySelector(".test > .image > #img_1").setAttribute("height", "80%");
@@ -506,7 +532,7 @@ function test_select_2()
                 //현재 문항의 이미지 생성
                 document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/5/1.png");
 
-                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; top:15%;");
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative;");
                 break;
             case 5:
                 //이전 문항에서 이미지 제거
@@ -527,8 +553,23 @@ function test_select_2()
                 document.querySelector(".test > .image > #img_1").setAttribute("style", "display:'';");
                 break;
             case 7:
+                //질문 글자 크기 변경 
+                if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
+                {
+                    document.querySelector(".test > .question").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:50%;");
+                    document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:1.5em; line-height:140%; letter-spacing:-0.1em; height:100%;");
+                }
+                if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
+                {
+                    document.querySelector(".test > .question").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:50%;");
+                    document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:2.7em; line-height:140%; letter-spacing:-0.1em; height:100%;");
+                }
+
                 //이전 문항에서 이미지 제거
                 document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+
+                //질문 그림 크기 변경
+                document.querySelector(".test > .image").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:35%;");
 
                 //현재 문항의 이미지 생성
                 document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/8/1.png");
@@ -550,6 +591,9 @@ function test_select_2()
                     document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:3.8em; line-height:140%; letter-spacing:-0.1em; height:100%;");
                 }
 
+                //질문 그림 크기 변경
+                document.querySelector(".test > .image").setAttribute("style", "display:flex; flex-direction:row; justify-content:center; align-items:center; height:25%;");
+
                 //현재 문항의 이미지 크기 변경
                 if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
                 {
@@ -567,8 +611,8 @@ function test_select_2()
                 document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/9/2.png");
                 document.querySelector(".test > .image > #img_2").setAttribute("src", "3_test/9/1.png");
                 
-                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; top:5%; right:15%;");
-                document.querySelector(".test > .image > #img_2").setAttribute("style", "display:''; position:relative; top:5%; left:15%;");
+                document.querySelector(".test > .image > #img_1").setAttribute("style", "display:''; position:relative; bottom:20%; left:35%;");
+                document.querySelector(".test > .image > #img_2").setAttribute("style", "display:''; position:relative; bottom:20%; right:35%;");
                 break;
             case 9:
                 //이전 문항에서 이미지 제거
@@ -597,6 +641,16 @@ function test_select_2()
                 //이전 문항에서 이미지 제거
                 document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
                 
+                //질문 글자 크기 변경 
+                if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
+                {
+                    document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:1.5em; line-height:140%; letter-spacing:-0.1em; height:100%;");
+                }
+                if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
+                {
+                    document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:2.7em; line-height:140%; letter-spacing:-0.1em; height:100%;");
+                }
+
                 //현재 문항의 이미지 크기 변경
                 document.querySelector(".test > .image > #img_1").setAttribute("height", "80%");
 
@@ -608,6 +662,16 @@ function test_select_2()
             case 11:
                 //이전 문항에서 이미지 제거
                 document.querySelector(".test > .image > #img_1").setAttribute("style", "display:none;");
+
+                //질문 글자 크기 변경 
+                if(matchMedia("all and (min-width:501px)").matches || matchMedia("all and (min-device-width:501px)").matches)
+                {
+                    document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:1.7em; line-height:140%; letter-spacing:-0.1em; height:100%;");
+                }
+                if(matchMedia("all and (max-device-width:500px)").matches || matchMedia("all and (max-width:500px)").matches)
+                {
+                    document.querySelector(".test > .question > #q_text > div").setAttribute("style", "display:flex; flex-direction:column; justify-content:start; align-items:center; font-family: 'home_font'; font-size:3em; line-height:140%; letter-spacing:-0.1em; height:100%;");
+                }
                 
                 //현재 문항의 이미지 생성
                 document.querySelector(".test > .image > #img_1").setAttribute("src", "3_test/12/1.png");
@@ -784,45 +848,45 @@ function end_loading(next_function)
 
 //질문 텍스트 
 test_question_text[0] = new String("RPG 게임을 새로\n시작하게 된 당신!\n그 이유는...");
-test_question_text[1] = new String("튜토리얼 중,\n처음 보는 사람들과\n 파티를 맺게 된 당신!");
-test_question_text[2] = new String("친한 친구들이 당신을\n따라 게임을 설치했다!\n우리끼리 길드를 만들어\n재밌게 해보자는\n친구들에게 당신은...");
+test_question_text[1] = new String("게임을 시작한 당신!\n낯선 사람이 말을\n거는데...");
+test_question_text[2] = new String("친구들과 길드를 만들었다!\n길드를 관리하는 운영진\n자리를 제의 받은 당신은...");
 test_question_text[3] = new String("게임을 진행할수록\n점점 빠져드는 당신!\n재미를 느끼는 핵심\n포인트를 하나 꼽자면...");
-test_question_text[4] = new String("메인 퀘스트 외에도,\n엄청나게 방대한\n서브 퀘스트들이 있다는\n사실을 알게 된 당신은...");
-test_question_text[5] = new String("이제 게임의 기본은\n이해한 당신!\n그럼에도 불구하고 게임\n가이드를 켜보는 이유는...");
-test_question_text[6] = new String("게임으로 침해진\n\'랜선친구\'가 한 말에\n 당신을 기분이 좋아졌다!\n그게 무슨 말이었냐면...");
-test_question_text[7] = new String("\"나 힘들게 40시간 갈아\n넣어서 12강 아이템 만듬\"\n이라는 친구의 귓말에,\n당신의 머릿속에 가장\n먼저 떠오르는 생각은...");
-test_question_text[8] = new String("퀘스트 진행 중\n알게 된 두 NPC!\n더 마음이 가는 쪽은...");
-test_question_text[9] = new String("이제 \'고인물\'이\n 되어버린 당신!\n본격적으로 게임을\n즐기기 시작한 당신은...");
-test_question_text[10] = new String("게임 회사에서\n소정의 기프티콘을 주며,\n\'1분의 목소리 인터뷰\'에\n 참여해달라는 제안에\n 당신이 준비하는 내용은...");
-test_question_text[11] = new String("게임을 하다가\n정이 뚝 떨어져서\n게임을 접게 된 당신!\n그 이유는...");
+test_question_text[4] = new String("메인 퀘스트 외에도,\n많은 서브 퀘스트들을\n발견한 당신은...");
+test_question_text[5] = new String("게임을 하던 당신이\n중간에 게임 가이드를\n 켜보는 이유는...");
+test_question_text[6] = new String("게임을 같이하던 친구가\n한 말에 당신은 기분이\n 좋아졌다!\n그게 무슨 말이었냐면...");
+test_question_text[7] = new String("\"나 어제 밤새 사냥해서\n전설 아이템 얻었다!\"는\n친구의 귓말에,\n 당신의 머릿속에 가장\n먼저 떠오르는 생각은...");
+test_question_text[8] = new String("퀘스트 진행 중\n마주친 두 NPC!\n더 마음이 가는 쪽은...");
+test_question_text[9] = new String("이제 \'고인물\'이 되어\n가는 당신! 게임을\n즐기며 고민하고\n있는 부분은...?");
+test_question_text[10] = new String("게임 회사에서\n 소정의 선물을 주며,\n\'1분 목소리'에\n참여해달라는 제안에\n당신은 먼저...");
+test_question_text[11] = new String("친구들이 매주 토요일\n오후 9시에 파티 퀘스트를\n같이 하자고 한다.\n이때 당신은?");
 
 //1번 선택지
 test_select_text_1[0] = new String("인터넷으로 보니 재미있어 보여서");
-test_select_text_1[1] = new String("일단 어떤 사람들일지 분위기 좀 보고...");
-test_select_text_1[2] = new String("만들고 싶으면 만들어! 가입은 할게");
+test_select_text_1[1] = new String("어떤 사람인지도 모르는데... (무시한다)");
+test_select_text_1[2] = new String("이왕 하는 거 운영진도 해봐야지!");
 test_select_text_1[3] = new String("퀘스트를 깨고 보상을 받는 성취감!\n(아이템 수집)");
-test_select_text_1[4] = new String("좀 해보니까 너무 뭐가 복잡하고 많은데;;\n일단 메인 퀘스트부터 더 깨보고 생각할래.");
-test_select_text_1[5] = new String("감 잡았으니 이제 가이드를 읽어볼까?\n(정독 후 플레이)");
-test_select_text_1[6] = new String("뭐야 나처럼 팬심으로 하는 줄 알았는데,\n넌 게임 별로 하지도 않으면서 실력 좋네.");
-test_select_text_1[7] = new String("헐 12강이면 얼마짜리지...?");
+test_select_text_1[4] = new String("일단 메인 퀘스트부터 더 깨보고 생각할래.");
+test_select_text_1[5] = new String("빠뜨린 거 없는지 가이드에서 찾아볼까?\n(정독 후 플레이)");
+test_select_text_1[6] = new String("넌 게임 자주 하지도 않으면서\n실력은 되게 좋네.");
+test_select_text_1[7] = new String("와 그거 얼마짜리일까?");
 test_select_text_1[8] = new String("불우한 환경에서\n 흑화할 수 밖에 없었던 악당");
-test_select_text_1[9] = new String("이미 해본 스테이지더라도,\n또 어떻게 다르게 즐길 수 있을지 고민한다");
-test_select_text_1[10] = new String("게임에 대한 전체적인 느낌과 소감을\n재미있게 말하기");
-test_select_text_1[11] = new String("딱히 끌리는 콘텐츠도 없고,\n다 거기서 거기일 거 같은 뻔한 느낌...");
+test_select_text_1[9] = new String("이미 클리어한 퀘스트라도,\n어떻게 다르게 즐길 수 있을지 고민한다");
+test_select_text_1[10] = new String("친구들한테 자랑해야지!");
+test_select_text_1[11] = new String("그냥 가고 싶을 때 가면 안 되나?ㅠ");
 
 //2번 선택지 
 test_select_text_2[0] = new String("친구들이랑 같이 하려고");
-test_select_text_2[1] = new String("그럴까? (마이크 on)");
-test_select_text_2[2] = new String("그래! 내가 만들지 뭐");
-test_select_text_2[3] = new String("여기저기 모험하면서 배워가는 재미!\n(세계관 탐험)");
-test_select_text_2[4] = new String("오~ 뭔지는 모르겠지만 할 수 잇는게\n많으면 오히려 좋아;; 이 맛에 게임하지!");
+test_select_text_2[1] = new String("혼자라 심심했는데 그럴까? (친구 수락)");
+test_select_text_2[2] = new String("운영진은 좀 부담... 길드원으로 남는다!");
+test_select_text_2[3] = new String("오픈월드에서 자유롭게 탐험하는 재미!\n(세계관 탐험)");
+test_select_text_2[4] = new String("할 게 많으면 더 좋아! 이 맛에 게임하지.");
 test_select_text_2[5] = new String("어, 내가 알던 게 맞나...? 확인해봐야지\n(그때그때 필요한 부분 찾기)");
-test_select_text_2[6] = new String("와 나는 세계관 신경 안 써서 몰랐는데,\n너는 이 게임에 진심이구나. 섬세하다.");
-test_select_text_2[7] = new String("헐 40시간 동안 혼자 어떤 싸움을 한거야...?");
-test_select_text_2[8] = new String("불우한 환경에도\n 역경을 헤치고 성장한 소년");
-test_select_text_2[9] = new String("아이템과 스킬 종류를 파악하고,\n 내가 없는 걸 채우기 위해 고민한다");
-test_select_text_2[10] = new String("구체적으로 게임의 어떤 부분이\n재밌었는지 말하기");
-test_select_text_2[11] = new String("밸런스도 엉망이고, \n완성도가 떨어져서 몰입이 안 돼...");
+test_select_text_2[6] = new String("넌 게임할 때도 부지런하네~\n언제 그렇게 키웠어?");
+test_select_text_2[7] = new String("와 밤새 사냥하느라 진짜 힘들었겠다...!");
+test_select_text_2[8] = new String("불우한 환경에도\n 역경을 헤치고 성장한 영웅");
+test_select_text_2[9] = new String("아이템과 스킬 종류를 파악하고,\n 나에게 없는 걸 어떻게 채울지 고민한다");
+test_select_text_2[10] = new String("어떤 내용으로 준비할지 개요부터 짜볼까!");
+test_select_text_2[11] = new String("그래 그러자! (캘린더에 표시한다)");
 
 //결과 텍스트
 result_type_text[0] = new String("ADEH");
