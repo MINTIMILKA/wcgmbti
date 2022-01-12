@@ -390,7 +390,10 @@ function test_restart()
 //공유 기능
 function test_share()
 {
-    //
+    Kakao.init('276e719d8448d0a0ea5ce688a4023792');
+    Kakao.Link.sendCustom({
+        templateId:68513
+    });
 }
 /*
 Kakao.Link.createDefaultButton(PARAMETER);
