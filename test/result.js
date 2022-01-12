@@ -389,7 +389,7 @@ function test_share()
       }
     );
     Kakao.Link.uploadImage({
-      file: 'http://www.gamebti.com/4_result/8/20.png'
+      file: '../4_result/8/20.png'
     });
 }
 
