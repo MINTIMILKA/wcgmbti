@@ -863,7 +863,7 @@ test_question_text[11] = new String("친구들이 매주 토요일\n오후 9시�
 //1번 선택지
 test_select_text_1[0] = new String("인터넷으로 보니 재미있어 보여서");
 test_select_text_1[1] = new String("어떤 사람인지도 모르는데... (무시한다)");
-test_select_text_1[2] = new String("이왕 하는 거 운영진도 해봐야지!");
+test_select_text_1[2] = new String("운영진은 좀 부담... 길드원으로 남는다!");
 test_select_text_1[3] = new String("퀘스트를 깨고 보상을 받는 성취감!\n(아이템 수집)");
 test_select_text_1[4] = new String("일단 메인 퀘스트부터 더 깨보고 생각할래.");
 test_select_text_1[5] = new String("빠뜨린 거 없는지 가이드에서 찾아볼까?\n(정독 후 플레이)");
@@ -877,7 +877,7 @@ test_select_text_1[11] = new String("그냥 가고 싶을 때 가면 안 되나?
 //2번 선택지 
 test_select_text_2[0] = new String("친구들이랑 같이 하려고");
 test_select_text_2[1] = new String("혼자라 심심했는데 그럴까? (친구 수락)");
-test_select_text_2[2] = new String("운영진은 좀 부담... 길드원으로 남는다!");
+test_select_text_2[2] = new String("이왕 하는 거 운영진도 해봐야지!");
 test_select_text_2[3] = new String("오픈월드에서 자유롭게 탐험하는 재미!\n(세계관 탐험)");
 test_select_text_2[4] = new String("할 게 많으면 더 좋아! 이 맛에 게임하지.");
 test_select_text_2[5] = new String("어, 내가 알던 게 맞나...? 확인해봐야지\n(그때그때 필요한 부분 찾기)");
