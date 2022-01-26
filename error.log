@@ -1,0 +1,2 @@
+[Wed Jan 26 00:00:06.934091 2022] [mpm_event:notice] [pid 811:tid 139821961159808] AH00489: Apache/2.4.38 (Debian) configured -- resuming normal operations
+[Wed Jan 26 00:00:06.934106 2022] [core:notice] [pid 811:tid 139821961159808] AH00094: Command line: '/usr/sbin/apache2'
